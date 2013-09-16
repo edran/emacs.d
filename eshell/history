@@ -1,0 +1,49 @@
+òs
+ls
+cd git/
+ls
+cd edinferno/
+ls
+git st
+git stash
+git pull origin master
+git branch
+ls
+cd ehuman/
+ls
+cd ..
+cd pro
+cd ehuman/
+ls
+cd Src/
+ls
+cd Modules/
+ls
+cd BehaviorControl/
+ls
+cd BH2011BehaviorControl/
+ls
+cd Options/
+ls
+cd Soccer/
+ls
+mkdir Demo
+cd Demo/
+ls
+touch demo.xabsl
+ls
+cd ../../
+ls
+cd ..
+cd ..
+cd ~/git/edinferno/
+git status
+ls
+git add ehuman/Src/Modules/BehaviorControl/BH2011BehaviorControl/Options/Soccer/Demo/
+git status
+git commit -m "Added demo goalkeeper behaviour"
+git push origin master
+git status
+git add ehuman/Src/Modules/BehaviorControl/BH2011BehaviorControl/Options/Soccer/Demo/demo.xabsl 
+git commit -m "Added fancy eyes"
+git push origin master
