@@ -1,49 +1,128 @@
-òs
+mkdir -p ~/.virtualenvs/my_env
+virtualenv ~/.virtualenvs/my_env/
+source ~/.virtualenvs/my_env/bin/activate
 ls
-cd git/
+feh 2013-10-11-155212_1600x900_scrot.png 
+mv 2013-10-11-155212_1600x900_scrot.png ./Documents/Se/img.png
+cd ./Documents/Se/img.png
+cd Documents/Se/
 ls
-cd edinferno/
+mkdir Org
+cd Org/
 ls
-git st
-git stash
-git pull origin master
-git branch
+ll
 ls
-cd ehuman/
-ls
+cd ./../../..
 cd ..
-cd pro
-cd ehuman/
 ls
-cd Src/
-ls
-cd Modules/
-ls
-cd BehaviorControl/
-ls
-cd BH2011BehaviorControl/
-ls
-cd Options/
-ls
-cd Soccer/
-ls
-mkdir Demo
-cd Demo/
-ls
-touch demo.xabsl
-ls
-cd ../../
-ls
-cd ..
-cd ..
-cd ~/git/edinferno/
 git status
-ls
-git add ehuman/Src/Modules/BehaviorControl/BH2011BehaviorControl/Options/Soccer/Demo/
-git status
-git commit -m "Added demo goalkeeper behaviour"
+git add -A 
+git commit -m "Restored configuration for small field"
 git push origin master
-git status
-git add ehuman/Src/Modules/BehaviorControl/BH2011BehaviorControl/Options/Soccer/Demo/demo.xabsl 
-git commit -m "Added fancy eyes"
-git push origin master
+gcc -o print_bits print_bits.c 
+./print_bits 
+gcc -o print_bits print_bits.c 
+./print_bits 
+gcc -o print_bits print_bits.c 
+./print_bits 
+gcc -o print_bits print_bits.c 
+./print_bits 
+gcc -o print_bits print_bits.c 
+./print_bits 
+gcc -o print_bits print_bits.c 
+./print_bits 
+gcc -o print_bits print_bits.c 
+./print_bits 
+gcc -o print_bits print_bits.c 
+./print_bits 
+gcc -o print_bits print_bits.c 
+./print_bits 
+gcc -o print_bits print_bits.c 
+./print_bits 
+banner
+banner 123
+gcc -o banner banner.c
+./banner 
+man ascii
+gcc -o banner banner.c
+./banner 
+./banner 123
+./banner 12345432345
+./banner 123 123 123
+gcc -o banner banner.c
+./banner 123 123 123
+./banner 123
+gcc -o banner banner.c
+./banner 123
+gcc -o banner banner.c
+./banner 123
+gcc -o banner banner.c
+./banner 123
+gcc -o banner banner.c
+gcc -o banner banner.c
+./banner 123
+gcc -o banner banner.c
+gcc -o banner banner.c
+gcc -o banner banner.c
+gcc -o banner banner.c
+./banner
+gcc -o banner banner.c
+./banner
+gcc -o banner banner.c
+./banner
+gcc -o banner banner.c
+./banner
+gcc -o banner banner.c
+gcc -o banner banner.c
+gcc -o banner banner.c
+gcc -o banner banner.c
+./banner
+ls
+cd ..
+cd Documents/Cs/Cw/
+ll
+ls
+l
+ls -l
+gcc -o banner banner.c
+gcc -o banner banner.c
+gcc -o banner banner.c
+gcc -C99 -o banner banner.c
+gcc --99 -o banner banner.c
+gcc --C99 -o banner banner.c
+gcc -std=c99 -o banner banner.c
+./banner 
+./banner 
+./banner 
+gcc -std=c99 -o banner banner.c
+./banner 
+./banner 
+gcc -std=c99 -o banner banner.c
+./banner 
+./banner 
+./banner asd
+./banner 
+./banner 
+gcc -std=c99 -o banner banner.c
+./banner 
+./banner 
+./banner 
+..#..#...###...##.....#...###...###...#.#....##.
+gcc -std=c99 -o banner banner.c
+./banner 
+gcc -std=c99 -o banner banner.c
+gcc -std=c99 -o banner banner.c
+gcc -o banner banner.c
+gcc -o banner banner.c
+gcc -o banner banner.c
+./banner 
+1234
+./banner 
+gcc -o banner banner.c
+./banner 
+gcc -o banner banner.c
+./banner 
+./banner 
+./banner 
+ls
+echo '123' | java -jar Mars.java sm banner.s

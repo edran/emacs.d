@@ -1,8 +1,16 @@
 ;; Add packages directory and files not in subdirectories
-(add-to-list 'load-path "~/.emacs.d/packages")
-(progn (cd "~/.emacs.d/packages")
+(add-to-list 'load-path "~/.emacs.d/") ;;was packages
+(progn (cd "~/.emacs.d/")
        (normal-top-level-add-subdirs-to-load-path))
        (normal-top-level-add-to-load-path '("."))
+
+;; Set packages for package.el
+(setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
+                         ("marmalade" . "http://marmalade-repo.org/packages/")
+                         ("melpa" . "http://melpa.milkbox.net/packages/")))
+
+
+(set-default-font "Inconsolata 10")
 
 ;; Code to deal with emacs 24 update (solarized)
 (if
@@ -16,9 +24,188 @@
     (require 'color-theme-solarized)
     (color-theme-solarized-dark)))
 (load-theme 'solarized-dark t)
+	
+;;; Shut up compile saves
+(setq compilation-ask-about-save nil)
+;;; Don't save *anything*
+(setq compilation-save-buffers-predicate '(lambda () nil))
 
-;; Python mode
+;; Set cursor color to white
+;;(set-cursor-color "#ffffff") 
+
+;; Set mouse color
+(set-mouse-color "white")
+
+;; Auto pair mode - pairing braces and stuff
+;;(require 'autopair)
+;;(autopair-global-mode) ;; to enable in all buffers
+
+;;;;org-mode configuration
+
+;; Enable org-mode
+(require 'org)
+
+;; Make org-mode work with files ending in .org
+(add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
+;; The above is the default in recent emacsen
+
+(setq org-todo-keywords
+  '((sequence "TODO" "IN-PROGRESS" "WAITING" "DONE")))
+
+(add-hook 'org-mode-hook 'turn-on-font-lock) ; not needed when global-font-lock-mode is on
+(global-set-key "\C-cl" 'org-store-link)
+(global-set-key "\C-ca" 'org-agenda)
+(global-set-key "\C-cb" 'org-iswitchb)
+
+
+;; Flyspell
+
+(setq-default ispell-program-name "aspell")
+(setq flyspell-default-dictionary "english")
+
+(add-hook 'markdown-mode 'flyspell-mode)
+(add-hook 'text-mode-hook 'flyspell-mode)
+(add-hook 'latex-mode-hook 'flyspell-mode)
+(add-hook 'html-mode-hook 'flyspell-mode)
+
+;; Autocomplete
+
+(require 'auto-complete-config)
+(define-key ac-mode-map (kbd "M-TAB") 'auto-complete)
+
+;; Markdown Mode
+
+(autoload 'markdown-mode "markdown-mode"
+  "Major mode for editing Markdown files" t)
+(add-to-list 'auto-mode-alist '("\\.text\\'" . markdown-mode))
+(add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
+(add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
+
+;; Clang
+
+(add-hook 'c-mode-common-hook 'google-set-c-style)
+(add-hook 'c-mode-common-hook 'google-make-newline-indent)
+
+;;(add-to-list 'load-path (concat myoptdir "AC"))
+(require 'auto-complete-config)
+;; (add-to-list 'ac-dictionary-directories (concat myoptdir "AC/ac-dict"))
+
+(require 'auto-complete-clang)
+
+(setq ac-auto-start nil)
+(setq ac-quick-help-delay 0.5)
+;; (ac-set-trigger-key "TAB")
+;; (define-key ac-mode-map  [(control tab)] 'auto-complete)
+(define-key ac-mode-map  [(control tab)] 'auto-complete)
+(defun my-ac-config ()
+  (setq-default ac-sources '(ac-source-abbrev ac-source-dictionary ac-source-words-in-same-mode-buffers))
+  (add-hook 'emacs-lisp-mode-hook 'ac-emacs-lisp-mode-setup)
+  ;; (add-hook 'c-mode-common-hook 'ac-cc-mode-setup)
+  (add-hook 'ruby-mode-hook 'ac-ruby-mode-setup)
+  (add-hook 'css-mode-hook 'ac-css-mode-setup)
+  (add-hook 'auto-complete-mode-hook 'ac-common-setup)
+  (global-auto-complete-mode t))
+(defun my-ac-cc-mode-setup ()
+  (setq ac-sources (append '(ac-source-clang ac-source-yasnippet) ac-sources)))
+(add-hook 'c-mode-common-hook 'my-ac-cc-mode-setup)
+;; ac-source-gtags
+(my-ac-config)
+
+;; Golang
+
+(require 'go-autocomplete)
+
+(add-to-list 'ac-modes 'go-mode)
+
+
+;; ########  LaTeX  ########
+
+;; Math auto-complete 
+
+(require 'ac-math)
+
+(add-to-list 'ac-modes 'latex-mode)   ; make auto-complete aware of `latex-mode`
+
+(defun ac-latex-mode-setup ()         ; add ac-sources to default ac-sources
+  (setq ac-sources
+        (append '(ac-source-math-unicode ac-source-math-latex ac-source-latex-commands)
+                ac-sources))
+  )
+
+(add-hook 'latex-mode-hook 'ac-latex-mode-setup)
+
+;; Because auto-complete and jedi are installed from MELPA
+
+(require 'package)
+(package-initialize)
+
+;;auto-complete
+
+(require 'popup)
+(require 'fuzzy)
+(require 'auto-complete-config)
+
+(global-auto-complete-mode t)
+(ac-config-default)
+
+(setq ac-auto-start nil)
+
+;;Python mode
+(defun my/python-mode-hook ()
+  (jedi:setup)
+  (define-key python-mode-map (kbd "C-M-i") 'jedi:complete))
+
+(add-hook 'python-mode-hook 'my/python-mode-hook)
 (add-hook 'python-mode-hook '(lambda () (define-key python-mode-map "\C-m" 'newline-and-indent)))
+	
+(require 'python)
+(defun python--add-debug-highlight ()
+  "Adds a highlighter for use by `python--pdb-breakpoint-string'"
+  (highlight-lines-matching-regexp "## DEBUG ##\\s-*$" 'hi-red-b))
+ 
+(add-hook 'python-mode-hook 'python--add-debug-highlight)
+ 
+(defvar python--pdb-breakpoint-string "import pdb; pdb.set_trace() ## DEBUG ##"
+  "Python breakpoint string used by `python-insert-breakpoint'")
+ 
+(defun python-insert-breakpoint ()
+  "Inserts a python breakpoint using `pdb'"
+  (interactive)
+  (back-to-indentation)
+  ;; this preserves the correct indentation in case the line above
+  ;; point is a nested block
+  (split-line)
+  (insert python--pdb-breakpoint-string))
+(define-key python-mode-map (kbd "<f5>") 'python-insert-breakpoint)
+ 
+(defadvice compile (before ad-compile-smart activate)
+  "Advises `compile' so it sets the argument COMINT to t
+if breakpoints are present in `python-mode' files"
+  (when (derived-mode-p major-mode 'python-mode)
+    (save-excursion
+      (save-match-data
+        (goto-char (point-min))
+        (if (re-search-forward (concat "^\\s-*" python--pdb-breakpoint-string "$")
+                               (point-max) t)
+            ;; set COMINT argument to `t'.
+            (ad-set-arg 1 t))))))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; Haskell-mode
+(require 'haskell-mode-autoloads)
+(add-to-list 'Info-default-directory-list "~/.emacs.d/packages/haskell-mode/")
+(add-hook 'haskell-mode-hook 'turn-on-haskell-indentation)
+;;(add-hook 'haskell-mode-hook 'turn-on-haskell-indent)
+;;(add-hook 'haskell-mode-hook 'turn-on-haskell-simple-indent)
+(eval-after-load "haskell-mode"
+  '(progn
+     (define-key haskell-mode-map (kbd "C-,") 'haskell-move-nested-left)
+     (define-key haskell-mode-map (kbd "C-.") 'haskell-move-nested-right)
+     (define-key haskell-mode-map (kbd "C-c C-c") 'haskell-compile)))
+
+(eval-after-load "haskell-cabal"
+  '(define-key haskell-cabal-mode-map (kbd "C-c C-c") 'haskell-compile))
 
 ;; Mini map
 (require 'minimap)
@@ -41,6 +228,7 @@
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes (quote ("fc5fcb6f1f1c1bc01305694c59a1a861b008c534cae8d0e48e4d5e81ad718bc6" "1e7e097ec8cb1f8c3a912d7e1e0331caeed49fef6cff220be63bd2a6ba4cc365" default)))
  '(inhibit-startup-screen t)
+ '(org-agenda-files (quote ("~/Documents/Org/doc.org")))
  '(tool-bar-mode nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -66,6 +254,7 @@
 (setq line-move-visual nil) ; use t for true, nil for false
 (global-visual-line-mode 1) ; 1 for on, 0 for off.
 (global-hl-line-mode 1) ; turn on highlighting current line
+(setq next-line-add-newlines t) ;add newline with c-n at EOL
 
 
 (defun toggle-margin-right ()
@@ -84,3 +273,4 @@ This command is convenient when reading novel, documentation."
     (setq-default line-spacing nil)   ; no extra heigh between lines
     )
   (redraw-display))
+
