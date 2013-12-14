@@ -1,128 +1,128 @@
-mkdir -p ~/.virtualenvs/my_env
-virtualenv ~/.virtualenvs/my_env/
-source ~/.virtualenvs/my_env/bin/activate
 ls
-feh 2013-10-11-155212_1600x900_scrot.png 
-mv 2013-10-11-155212_1600x900_scrot.png ./Documents/Se/img.png
-cd ./Documents/Se/img.png
-cd Documents/Se/
-ls
-mkdir Org
-cd Org/
-ls
-ll
-ls
-cd ./../../..
-cd ..
+cd Second_CW/
 ls
 git status
-git add -A 
-git commit -m "Restored configuration for small field"
+git add -A
+git commit -m "Real final"
 git push origin master
-gcc -o print_bits print_bits.c 
-./print_bits 
-gcc -o print_bits print_bits.c 
-./print_bits 
-gcc -o print_bits print_bits.c 
-./print_bits 
-gcc -o print_bits print_bits.c 
-./print_bits 
-gcc -o print_bits print_bits.c 
-./print_bits 
-gcc -o print_bits print_bits.c 
-./print_bits 
-gcc -o print_bits print_bits.c 
-./print_bits 
-gcc -o print_bits print_bits.c 
-./print_bits 
-gcc -o print_bits print_bits.c 
-./print_bits 
-gcc -o print_bits print_bits.c 
-./print_bits 
-banner
-banner 123
-gcc -o banner banner.c
-./banner 
-man ascii
-gcc -o banner banner.c
-./banner 
-./banner 123
-./banner 12345432345
-./banner 123 123 123
-gcc -o banner banner.c
-./banner 123 123 123
-./banner 123
-gcc -o banner banner.c
-./banner 123
-gcc -o banner banner.c
-./banner 123
-gcc -o banner banner.c
-./banner 123
-gcc -o banner banner.c
-gcc -o banner banner.c
-./banner 123
-gcc -o banner banner.c
-gcc -o banner banner.c
-gcc -o banner banner.c
-gcc -o banner banner.c
-./banner
-gcc -o banner banner.c
-./banner
-gcc -o banner banner.c
-./banner
-gcc -o banner banner.c
-./banner
-gcc -o banner banner.c
-gcc -o banner banner.c
-gcc -o banner banner.c
-gcc -o banner banner.c
-./banner
+ls
+cd Uni/
+ls
+mkdir Notes
+cd Notes/
+ls
+mkdir CS
+ls
+cd CS/
+ls
+lec1.md
 ls
 cd ..
-cd Documents/Cs/Cw/
+ls
+cd ../..
+cd pyagents/software/
+ls
+cd ..
+ls
+ls
+rm documentation.pdf 
+ls
+rm RoboCup-blatt1.pdf 
+ls
+mv software/ pythocup
+ls
+cd pythocup/
+ls
+ls
+ll
+archey 
+htop
+archey
+ls
+cd Git/
+cd Uni/
+ls
+git status
+git pull origin master
+ls
+cd Second_year/
+ls
+cd Cs/Second_cw/proc/
+ls
+git status
+cd ..
+ls
+cd ..
+l;s
+ls
+cd ../..
+ls
+git status
+git add -A
+git commit -m "Written states in controlUnit"
+git push origin master
+git pull origin master
+ls
+git status
+git commit -m "merged stuff"
+git push origin master
+ls
+git log --oneline
+git pull origin master
+ll
+ssh s1215573@@student.inf.ed.ac.uk
+ssh s1215573@student.inf.ed.ac.uk
+ls
+mkdir amr
+s
+ll
+cd Git/
+ls
+cd edinferno/
+ls
+git status
+git stash
+git pull origin master
+ll
+cd ehuman/
+ls
+cd Src/
+s
+ls
+ls
+ls
+cd Modules/BehaviorControl/
+ls
+ll
+cd BH2011BehaviorControl/
+ls
+cd Options/
+ls
+cd Skills/
+cd ..
+cd Soccer/
+ls
+cd Striker2/
+ls
+git checkout -b motion
+git status
+ll
+git status
+git add -A
+git add playing_striker.xabsl
+git status
+git add --all
+git add -A .
+git commit -m "Added kicker behaviour to fifth player"
+git push origin motion
+git checkout master
+ls
+git status
 ll
 ls
-l
-ls -l
-gcc -o banner banner.c
-gcc -o banner banner.c
-gcc -o banner banner.c
-gcc -C99 -o banner banner.c
-gcc --99 -o banner banner.c
-gcc --C99 -o banner banner.c
-gcc -std=c99 -o banner banner.c
-./banner 
-./banner 
-./banner 
-gcc -std=c99 -o banner banner.c
-./banner 
-./banner 
-gcc -std=c99 -o banner banner.c
-./banner 
-./banner 
-./banner asd
-./banner 
-./banner 
-gcc -std=c99 -o banner banner.c
-./banner 
-./banner 
-./banner 
-..#..#...###...##.....#...###...###...#.#....##.
-gcc -std=c99 -o banner banner.c
-./banner 
-gcc -std=c99 -o banner banner.c
-gcc -std=c99 -o banner banner.c
-gcc -o banner banner.c
-gcc -o banner banner.c
-gcc -o banner banner.c
-./banner 
-1234
-./banner 
-gcc -o banner banner.c
-./banner 
-gcc -o banner banner.c
-./banner 
-./banner 
-./banner 
 ls
-echo '123' | java -jar Mars.java sm banner.s
+cd Git/
+ls
+cd Uni/
+mkdir SDP
+cd SDP/
