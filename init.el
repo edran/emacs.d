@@ -1,3 +1,7 @@
+(server-start)
+(add-to-list 'auto-mode-alist '("/mutt" . mail-mode))
+
+
 ;; Add packages directory and files not in subdirectories
 (add-to-list 'load-path "~/.emacs.d/") ;;was packages
 (progn (cd "~/.emacs.d/")
@@ -10,7 +14,12 @@
                          ("melpa" . "http://melpa.milkbox.net/packages/")))
 
 
-(set-default-font "Inconsolata 10")
+;;(set-default-font "Inconsolata 9")
+;;(set-frame-font "Inconsolata" 9 )
+(set-frame-font "Anonymous Pro 9")
+
+;;(auto-fill-mode t)
+(setq fill-column 78)
 
 ;; Code to deal with emacs 24 update (solarized)
 (if
@@ -40,6 +49,22 @@
 ;;(require 'autopair)
 ;;(autopair-global-mode) ;; to enable in all buffers
 
+;; 80 COLUMS MARKER
+(require 'whitespace)
+(setq whitespace-line-column 78) ;; limit line length
+(setq whitespace-style '(face lines-tail))
+
+;;(add-hook 'prog-mode-hook 'whitespace-mode) ;;only programming modes
+(global-whitespace-mode +1) ;;globally activated
+
+;;;; Git-Mode
+
+;;(require 'git)
+(autoload 'magit-status "magit" nil t)
+
+(autoload 'magit-status "magit" nil t)
+
+
 ;;;;org-mode configuration
 
 ;; Enable org-mode
@@ -52,7 +77,8 @@
 (setq org-todo-keywords
   '((sequence "TODO" "IN-PROGRESS" "WAITING" "DONE")))
 
-(add-hook 'org-mode-hook 'turn-on-font-lock) ; not needed when global-font-lock-mode is on
+(add-hook 'org-mode-hook 'turn-on-font-lock) ;; not needed when 
+                                             ;; global-font-lock-mode is on
 (global-set-key "\C-cl" 'org-store-link)
 (global-set-key "\C-ca" 'org-agenda)
 (global-set-key "\C-cb" 'org-iswitchb)
@@ -68,6 +94,20 @@
 (add-hook 'latex-mode-hook 'flyspell-mode)
 (add-hook 'html-mode-hook 'flyspell-mode)
 
+;; Completion words longer than 4 characters
+(custom-set-variables
+ '(ac-ispell-requires 4))
+
+;; (eval-after-load "auto-complete"
+;;   '(progn
+;;      (ac-ispell-setup)))
+
+;; (defun my/enable-ac-ispell ()
+;;   (add-to-list 'ac-sources 'ac-source-ispell))
+
+;; (add-hook 'git-commit-mode-hook 'my/enable-ac-ispell)
+;; (add-hook 'mail-mode-hook 'my/enable-ac-ispell)
+
 ;; Autocomplete
 
 (require 'auto-complete-config)
@@ -82,34 +122,47 @@
 (add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
 
 ;; Clang
-
+(require  'google-c-style)
 (add-hook 'c-mode-common-hook 'google-set-c-style)
 (add-hook 'c-mode-common-hook 'google-make-newline-indent)
-
 ;;(add-to-list 'load-path (concat myoptdir "AC"))
-(require 'auto-complete-config)
+;;(require 'auto-complete-config)
 ;; (add-to-list 'ac-dictionary-directories (concat myoptdir "AC/ac-dict"))
-
 (require 'auto-complete-clang)
+(global-set-key (kbd "C-`") 'ac-complete-clang)
 
-(setq ac-auto-start nil)
-(setq ac-quick-help-delay 0.5)
-;; (ac-set-trigger-key "TAB")
+  ;; (custom-set-variables
+  ;;   '(ac-etags-requires 1))
+
+  ;; (eval-after-load "etags"
+  ;;   '(progn
+  ;;       (ac-etags-setup)))
+
+  ;; (defun my/c-mode-common-hook ()
+  ;;   (add-to-list 'ac-sources 'ac-source-etags))
+
+  ;; (add-hook 'c-mode-common-hook 'my/c-mode-common-hook)
+
+;; (setq ac-auto-start nil)
+;; (setq ac-quick-help-delay 0.5)
+;; ;; (ac-set-trigger-key "TAB")
+;; ;; (define-key ac-mode-map  [(control tab)] 'auto-complete)
 ;; (define-key ac-mode-map  [(control tab)] 'auto-complete)
-(define-key ac-mode-map  [(control tab)] 'auto-complete)
-(defun my-ac-config ()
-  (setq-default ac-sources '(ac-source-abbrev ac-source-dictionary ac-source-words-in-same-mode-buffers))
-  (add-hook 'emacs-lisp-mode-hook 'ac-emacs-lisp-mode-setup)
-  ;; (add-hook 'c-mode-common-hook 'ac-cc-mode-setup)
-  (add-hook 'ruby-mode-hook 'ac-ruby-mode-setup)
-  (add-hook 'css-mode-hook 'ac-css-mode-setup)
-  (add-hook 'auto-complete-mode-hook 'ac-common-setup)
-  (global-auto-complete-mode t))
-(defun my-ac-cc-mode-setup ()
-  (setq ac-sources (append '(ac-source-clang ac-source-yasnippet) ac-sources)))
-(add-hook 'c-mode-common-hook 'my-ac-cc-mode-setup)
-;; ac-source-gtags
-(my-ac-config)
+;; (defun my-ac-config ()
+;;   (setq-default ac-sources 
+;; 		'(ac-source-abbrev ac-source-dictionary 
+;; 				   ac-source-words-in-same-mode-buffers))
+;;   (add-hook 'emacs-lisp-mode-hook 'ac-emacs-lisp-mode-setup)
+;;   ;; (add-hook 'c-mode-common-hook 'ac-cc-mode-setup)
+;;   (add-hook 'ruby-mode-hook 'ac-ruby-mode-setup)
+;;   (add-hook 'css-mode-hook 'ac-css-mode-setup)
+;;   (add-hook 'auto-complete-mode-hook 'ac-common-setup)
+;;   (global-auto-complete-mode t))
+;; (defun my-ac-cc-mode-setup ()
+;;   (setq ac-sources (append '(ac-source-clang ac-source-yasnippet) ac-sources)))
+;; (add-hook 'c-mode-common-hook 'my-ac-cc-mode-setup)
+;; ;; ac-source-gtags
+;; (my-ac-config)
 
 ;; Golang
 
@@ -124,11 +177,12 @@
 
 (require 'ac-math)
 
-(add-to-list 'ac-modes 'latex-mode)   ; make auto-complete aware of `latex-mode`
+(add-to-list 'ac-modes 'latex-mode) ;; make auto-complete aware of `latex-mode`
 
-(defun ac-latex-mode-setup ()         ; add ac-sources to default ac-sources
+(defun ac-latex-mode-setup () ;; add ac-sources to default ac-sources
   (setq ac-sources
-        (append '(ac-source-math-unicode ac-source-math-latex ac-source-latex-commands)
+        (append '(ac-source-math-unicode 
+		  ac-source-math-latex ac-source-latex-commands)
                 ac-sources))
   )
 
@@ -150,45 +204,95 @@
 
 (setq ac-auto-start nil)
 
-;;Python mode
-(defun my/python-mode-hook ()
-  (jedi:setup)
-  (define-key python-mode-map (kbd "C-M-i") 'jedi:complete))
 
-(add-hook 'python-mode-hook 'my/python-mode-hook)
-(add-hook 'python-mode-hook '(lambda () (define-key python-mode-map "\C-m" 'newline-and-indent)))
+;;Python mode
+;; --------------------------------------
+;; python for emacs
+
+(load-file "~/.emacs.d/packages/emacs-for-python/epy-init.el")
+
+;; Each of them enables different parts of the system.
+;; Only the first two are needed for pep8, syntax check.
+(require 'epy-setup) ;; It will setup other loads, it is required!
+(require 'epy-python) ;; If you want the python facilities [optional]
+(require 'epy-completion) ;; If you want the autocompletion settings[optional]
+(require 'epy-editing) ;; For configurations related to editing [optional]
+;; [newer version of emacs-for-python]
+(require 'epy-nose) ;; For shortcut to call nosetests [optional]
+
+;; Define f10 to previous error
+;; Define f11 to next error
+(require 'epy-bindings) ;; For my suggested keybindings [optional]
+
+;; Some shortcut that do not collide with gnome-terminal,
+;; otherwise, "epy-bindings" define f10 and f11 for them.
+(global-set-key [f2] 'flymake-goto-prev-error)
+(global-set-key [f3] 'flymake-goto-next-error)
+
+;; Next two lines are the checks to do. You can add more if you wish.
+;; (epy-setup-checker "pyflakes %f") ;; For python syntax check
+(epy-setup-checker "pep8-python2 -r %f") ;; For pep8 check
+
+(when (load "flymake" t)
+  (defun flymake-pyflakes-init ()
+     ; Make sure it's not a remote buffer or flymake would not work
+    (when (not (subsetp (list (current-buffer)) (tramp-list-remote-buffers)))
+      (let* ((temp-file (flymake-init-create-temp-buffer-copy
+                         'flymake-create-temp-inplace))
+             (local-file (file-relative-name
+                          temp-file
+                          (file-name-directory buffer-file-name))))
+        (list "pyflakes" (list local-file)))))
+  (add-to-list 'flymake-allowed-file-name-masks
+               '("\\.py\\'" flymake-pyflakes-init)))
+
+;; highlights indentation
+(require 'highlight-indentation)
+(add-hook 'python-mode-hook 'highlight-indentation)
+
+;; (defun my/python-mode-hook ()
+;;   (jedi:setup)
+;;   (define-key python-mode-map (kbd "C-M-i") 'jedi:complete))
+
+;; (add-hook 'python-mode-hook 'my/python-mode-hook)
+;;(add-hook 'python-mode-hook '(
+;;			      lambda () 
+;;				     (define-key python-mode-map "\C-m" 
+;;				       'newline-and-indent)))
 	
-(require 'python)
-(defun python--add-debug-highlight ()
-  "Adds a highlighter for use by `python--pdb-breakpoint-string'"
-  (highlight-lines-matching-regexp "## DEBUG ##\\s-*$" 'hi-red-b))
+;; (require 'python)
+;; (defun python--add-debug-highlight ()
+;;   "Adds a highlighter for use by `python--pdb-breakpoint-string'"
+;;   (highlight-lines-matching-regexp "## DEBUG ##\\s-*$" 'hi-red-b))
  
-(add-hook 'python-mode-hook 'python--add-debug-highlight)
+;; (add-hook 'python-mode-hook 'python--add-debug-highlight)
  
-(defvar python--pdb-breakpoint-string "import pdb; pdb.set_trace() ## DEBUG ##"
-  "Python breakpoint string used by `python-insert-breakpoint'")
+;;(defvar python--pdb-breakpoint-string 
+;;  "import pdb; pdb.set_trace() ## DEBUG ##"
+;;   "Python breakpoint string used by `python-insert-breakpoint'")
  
-(defun python-insert-breakpoint ()
-  "Inserts a python breakpoint using `pdb'"
-  (interactive)
-  (back-to-indentation)
-  ;; this preserves the correct indentation in case the line above
-  ;; point is a nested block
-  (split-line)
-  (insert python--pdb-breakpoint-string))
-(define-key python-mode-map (kbd "<f5>") 'python-insert-breakpoint)
+;; (defun python-insert-breakpoint ()
+;;   "Inserts a python breakpoint using `pdb'"
+;;   (interactive)
+;;   (back-to-indentation)
+;;   ;; this preserves the correct indentation in case the line above
+;;   ;; point is a nested block
+;;   (split-line)
+;;   (insert python--pdb-breakpoint-string))
+;; (define-key python-mode-map (kbd "<f5>") 'python-insert-breakpoint)
  
-(defadvice compile (before ad-compile-smart activate)
-  "Advises `compile' so it sets the argument COMINT to t
-if breakpoints are present in `python-mode' files"
-  (when (derived-mode-p major-mode 'python-mode)
-    (save-excursion
-      (save-match-data
-        (goto-char (point-min))
-        (if (re-search-forward (concat "^\\s-*" python--pdb-breakpoint-string "$")
-                               (point-max) t)
-            ;; set COMINT argument to `t'.
-            (ad-set-arg 1 t))))))
+;; (defadvice compile (before ad-compile-smart activate)
+;;   "Advises `compile' so it sets the argument COMINT to t
+;; if breakpoints are present in `python-mode' files"
+;;   (when (derived-mode-p major-mode 'python-mode)
+;;     (save-excursion
+;;       (save-match-data
+;;         (goto-char (point-min))
+;;  (if (re-search-forward (concat "^\\s-*" 
+;;				 python--pdb-breakpoint-string "$")
+;;                                (point-max) t)
+;;             ;; set COMINT argument to `t'.
+;;             (ad-set-arg 1 t))))))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -210,6 +314,11 @@ if breakpoints are present in `python-mode' files"
 ;; Mini map
 (require 'minimap)
 
+;; Ag, the silver searcher
+(require 'ag)
+(setq ag-highlight-search t)
+;;(setq ag-reuse-window 't)
+
 ;; Keyset for switching between frames
 (global-set-key [s-left] 'windmove-left) 
 (global-set-key [s-right] 'windmove-right) 
@@ -226,7 +335,10 @@ if breakpoints are present in `python-mode' files"
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(custom-safe-themes (quote ("fc5fcb6f1f1c1bc01305694c59a1a861b008c534cae8d0e48e4d5e81ad718bc6" "1e7e097ec8cb1f8c3a912d7e1e0331caeed49fef6cff220be63bd2a6ba4cc365" default)))
+ '(custom-safe-themes 
+   (quote ("fc5fcb6f1f1c1bc01305694c59a1a861b008c534cae8d0e48e4d5e81ad718bc6"
+	   "1e7e097ec8cb1f8c3a912d7e1e0331caeed49fef6cff220be63bd2a6ba4cc365"
+	   default)))
  '(inhibit-startup-screen t)
  '(org-agenda-files (quote ("~/Documents/Org/doc.org")))
  '(tool-bar-mode nil))
@@ -255,7 +367,8 @@ if breakpoints are present in `python-mode' files"
 (global-visual-line-mode 1) ; 1 for on, 0 for off.
 (global-hl-line-mode 1) ; turn on highlighting current line
 (setq next-line-add-newlines t) ;add newline with c-n at EOL
-
+(setq line-number-mode t)
+(setq column-number-mode t)
 
 (defun toggle-margin-right ()
   "Toggle the right margin between `fill-column' or window width.
@@ -273,4 +386,3 @@ This command is convenient when reading novel, documentation."
     (setq-default line-spacing nil)   ; no extra heigh between lines
     )
   (redraw-display))
-
