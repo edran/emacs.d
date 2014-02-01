@@ -1,11 +1,14 @@
 .emacs.d
 ========
 
+Pretty much an always in-progress config.
+
 Installation
 ------------
 
 ```
-# git clone --recursive git@github.com/edran/emacs.d
-# cd vendor
-# ./install.sh
+cd ~
+git clone --recursive git@github.com/edran/emacs.d .emacs.d
+cd .emacs.d/vendor
+./install.sh
 ```
