@@ -15,29 +15,18 @@
 ;;(auto-fill-mode t)
 (setq fill-column 78)
 
-;; Code to deal with emacs 24 update (solarized)
-(if
-    (equal 0 (string-match "^24" emacs-version))
-    ;; it's emacs24, so use built-in theme 
-    (require 'solarized-dark-theme)
-  ;; it's NOT emacs24, so use color-theme
-  (progn
-    (require 'color-theme)
-    (color-theme-initialize)
-    (require 'color-theme-solarized)
-    (color-theme-solarized-dark)))
-(load-theme 'solarized-dark t)
-
-;;; Shut up compile saves
+;; Shut up compile saves
 (setq compilation-ask-about-save nil)
-;;; Don't save *anything*
+;; Don't save *anything*
 (setq compilation-save-buffers-predicate '(lambda () nil))
 
 ;; Set cursor color to white
 ;;(set-cursor-color "#ffffff") 
 
 ;; Set mouse color
-(set-mouse-color "white")
+;;(set-mouse-color "white")
+
+
 
 ;; Keyset for switching between frames
 (global-set-key [s-left] 'windmove-left) 
@@ -55,10 +44,6 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(custom-safe-themes 
-   (quote ("fc5fcb6f1f1c1bc01305694c59a1a861b008c534cae8d0e48e4d5e81ad718bc6"
-	   "1e7e097ec8cb1f8c3a912d7e1e0331caeed49fef6cff220be63bd2a6ba4cc365"
-	   default)))
  '(inhibit-startup-screen t)
  '(tool-bar-mode nil))
 (custom-set-faces
