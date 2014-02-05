@@ -11,3 +11,6 @@
 (load "~/.emacs.d/config/look.el")
 (load "~/.emacs.d/config/navigation.el")
 
+(load "~/.emacs.d/config/haskell-mode.el")
+
+
