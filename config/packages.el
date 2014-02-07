@@ -7,7 +7,7 @@
   (package-refresh-contents))
 
 (defvar prelude-packages
-  '(flycheck flycheck-color-mode-line auto-complete)
+  '(flycheck flycheck-color-mode-line auto-complete ghc ghci-completion)
    "A list of packages to ensure are installed at launch.")
 
 (dolist (p prelude-packages)
