@@ -14,8 +14,11 @@
 
 (add-to-list 'completion-ignored-extensions ".hi")
 
+(add-to-list 'exec-path "~/.cabal/bin")
+(add-to-list 'load-path "~/.cabal/share/ghc-mod-3.1.6")
+
 (require 'haskell-mode-autoloads)
-(add-to-list 'Info-default-directory-list "~/.emacs.d/vendor/haskell-mode/")
+(add-to-list 'Info-default-directory-list "~/.emacs.d/vendor/haskell-mode.el/")
 
 (autoload 'ghc-init "ghc" nil t)
 (add-hook 'haskell-mode-hook
