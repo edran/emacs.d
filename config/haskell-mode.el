@@ -17,7 +17,7 @@
 (add-to-list 'exec-path "~/.cabal/bin")
 (add-to-list 'load-path "~/.cabal/share/ghc-mod-3.1.6")
 
-(require 'haskell-mode-autoloads)
+(load "~/.emacs.d/vendor/haskell-mode/haskell-mode-autoloads.el")
 (add-to-list 'Info-default-directory-list "~/.emacs.d/vendor/haskell-mode.el/")
 
 (autoload 'ghc-init "ghc" nil t)

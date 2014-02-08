@@ -21,7 +21,8 @@
     flycheck-color-mode-line
     auto-complete
     ghc
-    ghci-completion)
+    ghci-completion
+    auctex)
    "A list of packages to ensure are installed at launch.")
 
 (dolist (p prelude-packages)
