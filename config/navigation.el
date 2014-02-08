@@ -3,9 +3,26 @@
 
 ;;; Code:
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Switch keys to go to indentation instead starting line
+;; (global-set-key (kbd "C-a") 'back-to-indentation)
+;; (global-set-key (kbd "C-S-a") 'beginning-of-visual-line)
+;; (global-set-key (kbd "M-m") 'beginning-of-visual-line)
 
 ;; Undo/redo window configuration with C-c <left>/<right>
 (winner-mode 1)
+ 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; isearch  made better
+
+(add-hook 'isearch-mode-end-hook 'my-goto-match-beginning)
+(defun my-goto-match-beginning ()
+  (when (and isearch-forward (not isearch-mode-end-hook-quit)) (goto-char isearch-other-end)))
+
+;;  (defun my-goto-match-beginning ()
+;;    (when isearch-forward (goto-char isearch-other-end)))
+
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Keyset for switching between frames

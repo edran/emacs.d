@@ -27,5 +27,8 @@
 (load "~/.emacs.d/config/ispell.el")
 (load "~/.emacs.d/config/ido-mode.el")
 (load "~/.emacs.d/config/markdown-mode.el")
+(load "~/.emacs.d/config/python-mode.el")
+(load "~/.emacs.d/config/indent.el")
+(load "~/.emacs.d/config/tramp-mode.el")
 ;;; local-config.el ends here
 
