@@ -38,15 +38,29 @@
 
 ;; Delete selected text when typing
 (delete-selection-mode 1)
+
 ;; Highlighting keystrokes like other editors
 (transient-mark-mode t)
+
 ;; Enable x clipoard (TODO will it work with emacsclient too?)
 (setq x-select-enable-clipboard t)
+
 ;; Make sure I only have to use y o n
 (defalias 'yes-or-no-p 'y-or-n-p)
+
 ;; add newline with c-n at EOL
 (setq next-line-add-newlines t)
 
+;; Auto refresh buffers
+(global-auto-revert-mode 1)
+
+;; Also auto refresh dired, but be quiet about it
+(require 'autorevert)
+(setq global-auto-revert-non-file-buffers t)
+(setq auto-revert-verbose nil)
+
+;; Sentences do not need double spaces to end. Period.
+(set-default 'sentence-end-double-space nil)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; To refactor
@@ -56,6 +70,18 @@
 (setq make-backup-files nil) ; stop creating those backup~ files
 (setq auto-save-default nil) ; stop creating those #autosave# files
 (setq line-move-visual nil) ; use t for true, nil for false
+
+;; Move files to trash when deleting
+(setq delete-by-moving-to-trash t)
+
+;; Transparently open compressed files
+(auto-compression-mode t)
+
+;; (auto-fill-mode t)
+(setq fill-column 78)
+
+;; TODO check which files go here...
+(setq temporary-file-directory "~/.emacs.d/tmp/")
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

@@ -1,8 +1,13 @@
 (require 'auto-complete)
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; General
+
 (setq ac-comphist-file "~/.emacs.d/config/ac-cmphist.dat")
 
-;; #### Haskell Mode ####
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Haskell Mode
 
 (ac-define-source ghc-mod
 		  '((depends ghc)

@@ -13,9 +13,17 @@
 (load "~/.emacs.d/config/general.el")
 (load "~/.emacs.d/config/look.el")
 (load "~/.emacs.d/config/navigation.el")
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Plugins
+
 (load "~/.emacs.d/config/packages.el")
+
 (load "~/.emacs.d/config/haskell-mode.el")
 (load "~/.emacs.d/config/flycheck.el")
 (load "~/.emacs.d/config/auto-complete.el")
+(load "~/.emacs.d/config/tex-mode.el")
+
 ;;; local-config.el ends here
 
