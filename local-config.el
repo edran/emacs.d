@@ -25,5 +25,7 @@
 (load "~/.emacs.d/config/auto-complete.el")
 (load "~/.emacs.d/config/tex-mode.el")
 (load "~/.emacs.d/config/ispell.el")
+(load "~/.emacs.d/config/ido-mode.el")
+(load "~/.emacs.d/config/markdown-mode.el")
 ;;; local-config.el ends here
 
