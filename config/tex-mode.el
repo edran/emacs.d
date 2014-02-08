@@ -16,10 +16,6 @@
 (add-hook 'LaTeX-mode-hook 'LaTeX-math-mode)                                                     
 (add-hook 'LaTeX-mode-hook 'turn-on-reftex)                                                      
 
-;; (setq reftex-plug-into-AUCTeX t)
-;; (setq TeX-view-program-list '(("Shell Default" "open %o")))                                      
-;; (setq TeX-view-program-selection '((output-pdf "Shell Default"))) 
-
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Start flyspell
@@ -80,3 +76,12 @@
 	LaTeX-section-toc
 	LaTeX-section-section
 	LaTeX-section-label))
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Preview-latex
+
+;; C-c C-p C-p             - ‘Preview/at point’
+;; C-h i d m preview-latex - info
+;; C-c C-p <TAB>           - info
+;; C-c C-p C-r             - preview-region

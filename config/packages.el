@@ -22,7 +22,8 @@
     auto-complete
     ghc
     ghci-completion
-    auctex)
+    auctex
+    markdown-mode)
    "A list of packages to ensure are installed at launch.")
 
 (dolist (p prelude-packages)
