@@ -23,7 +23,8 @@
     ghc
     ghci-completion
     auctex
-    markdown-mode)
+    markdown-mode
+    haskell-mode)
    "A list of packages to ensure are installed at launch.")
 
 (dolist (p prelude-packages)
