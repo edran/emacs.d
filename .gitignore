@@ -8,6 +8,7 @@ auto-save-list/
 eshell/
 elpa/
 config/ac-cmphist.dat
+tmp/
 
 # Markdown-mode
 index.text
