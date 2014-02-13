@@ -21,8 +21,8 @@
  (add-to-list 'exec-path cabal-path)
  (setenv "PATH" (concat cabal-path ":" (getenv "PATH"))))
 
-(load "~/.emacs.d/vendor/haskell-mode/haskell-mode-autoloads.el")
-(add-to-list 'Info-default-directory-list "~/.emacs.d/vendor/haskell-mode.el/")
+;; (load "~/.emacs.d/vendor/haskell-mode/haskell-mode-autoloads.el")
+;; (add-to-list 'Info-default-directory-list "~/.emacs.d/vendor/haskell-mode.el/")
 
 (autoload 'ghc-init "ghc" nil t)
 (add-hook 'haskell-mode-hook
