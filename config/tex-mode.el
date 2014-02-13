@@ -1,10 +1,11 @@
 ;; (add-to-list 'load-path "~/.emacd.d/vendor/auctex/")
 
-(load "auctex.el" nil t t) ;; loads tex-site in such a way so that it can be undone              
-(load "preview-latex.el" nil t t) ;; actual preview-latex   
+;; (load "auctex.el" nil t t) ;; loads tex-site in such a way so that it can be undone              
+;; (load "preview-latex.el" nil t t) ;; actual preview-latex   
 
 (require 'tex)
 (require 'latex)
+
 
 (setq TeX-PDF-mode t)                                                                            
 (setq TeX-auto-save t)                                                                           
