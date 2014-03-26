@@ -24,7 +24,9 @@
     ghci-completion
     auctex
     markdown-mode
-    haskell-mode)
+    haskell-mode
+    web-mode
+    guru-mode)
    "A list of packages to ensure are installed at launch.")
 
 (dolist (p prelude-packages)
