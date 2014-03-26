@@ -30,5 +30,7 @@
 (load "~/.emacs.d/config/python-mode.el")
 (load "~/.emacs.d/config/indent.el")
 (load "~/.emacs.d/config/tramp-mode.el")
+(load "~/.emacs.d/config/web-mode.el")
+(load "~/.emacs.d/config/guru-mode.el")
 ;;; local-config.el ends here
 
