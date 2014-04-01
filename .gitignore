@@ -13,3 +13,4 @@ tmp/*
 # Markdown-mode
 index.text
 index.html
+.python-environments/
