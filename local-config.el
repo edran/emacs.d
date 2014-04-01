@@ -22,6 +22,8 @@
 
 (load "~/.emacs.d/config/haskell-mode.el")
 (load "~/.emacs.d/config/flycheck.el")
+;; (load "~/.emacs.d/config/yasnippet.el") TODO: fix issue with autocomplete
+;; (bind to C-o maybe?)
 (load "~/.emacs.d/config/auto-complete.el")
 (load "~/.emacs.d/config/tex-mode.el")
 (load "~/.emacs.d/config/ispell.el")

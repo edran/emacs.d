@@ -10,6 +10,18 @@
 (ac-config-default)
 (global-auto-complete-mode t)
 
+(define-key ac-menu-map 
+  (kbd "M-n") 'ac-next) 
+
+(define-key ac-menu-map 
+  (kbd "M-p") 'ac-previous)
+
+(setq ac-auto-show-menu 0.8) 
+(setq ac-delay 0.1)
+
+(ac-set-trigger-key "TAB")
+(ac-set-trigger-key "<tab>")
+
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Haskell Mode
