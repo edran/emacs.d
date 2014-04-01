@@ -14,3 +14,4 @@ tmp/*
 index.text
 index.html
 .python-environments/
+config/ac-dict/ac-cmphist.dat
