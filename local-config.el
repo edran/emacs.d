@@ -32,5 +32,8 @@
 (load "~/.emacs.d/config/tramp-mode.el")
 (load "~/.emacs.d/config/web-mode.el")
 (load "~/.emacs.d/config/guru-mode.el")
+(load "~/.emacs.d/config/fill-column-indicator.el")
+
+
 ;;; local-config.el ends here
 

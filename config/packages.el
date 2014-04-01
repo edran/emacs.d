@@ -6,7 +6,12 @@
 ;;; Code:
 
 (add-to-list 'package-archives
-             '("melpa" . "http://melpa.milkbox.net/packages/") t)
+	     '("melpa" . "http://melpa.milkbox.net/packages/"))
+
+(add-to-list 'package-archives 
+    '("marmalade" .
+      "http://marmalade-repo.org/packages/"))
+
 (package-initialize)
 
 
@@ -26,7 +31,16 @@
     markdown-mode
     haskell-mode
     web-mode
-    guru-mode)
+    guru-mode
+    whitespace-cleanup-mode
+    fill-column-indicator
+    epc
+    python-environment
+    jedi
+    python-django
+    smartrep
+    ein
+    yasnippet)
    "A list of packages to ensure are installed at launch.")
 
 (dolist (p prelude-packages)
