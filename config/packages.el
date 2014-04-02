@@ -40,7 +40,12 @@
     python-django
     smartrep
     ein
-    yasnippet)
+    yasnippet
+    auto-complete-auctex
+    auto-complete-clang
+    autopair
+    ecb
+    expand-region)
    "A list of packages to ensure are installed at launch.")
 
 (dolist (p prelude-packages)

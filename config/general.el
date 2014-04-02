@@ -62,6 +62,9 @@
 ;; Sentences do not need double spaces to end. Period.
 (set-default 'sentence-end-double-space nil)
 
+;; TABS ARE EVIL
+(setq-default indent-tabs-mode nil)
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; To refactor
 

@@ -35,7 +35,10 @@
 (load "~/.emacs.d/config/web-mode.el")
 (load "~/.emacs.d/config/guru-mode.el")
 (load "~/.emacs.d/config/fill-column-indicator.el")
-
+(load "~/.emacs.d/config/autopair.el")
+(load "~/.emacs.d/config/cc-mode.el")
+(load "~/.emacs.d/config/ecb.el")
+(load "~/.emacs.d/config/expand-region.el")
 
 ;;; local-config.el ends here
 
