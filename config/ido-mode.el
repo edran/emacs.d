@@ -11,6 +11,14 @@
 ;; files to emphasize
 (setq ido-file-extensions-order '(".org" ".md" ".py" ".h" ".cpp" ".c" ".hs" ".emacs" ".el"))
 
+(require 'flx-ido)
+(ido-mode 1)
+(ido-everywhere 1)
+(flx-ido-mode 1)
+;; disable ido faces to see flx highlights.
+(setq ido-use-faces nil)
+
+
 ;; Ignore some extensions (check completion-ignored-extensions)
  (setq ido-ignore-extensions t) 
 
