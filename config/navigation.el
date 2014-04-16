@@ -12,12 +12,17 @@
 ;; Undo/redo window configuration with C-c <left>/<right>
 (winner-mode 1)
 
+;; Scrolling? TODO: check smooth-scroll vs smooth-scrolling
+(require 'smooth-scrolling)
+;; (require 'smooth-scroll)
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; isearch  made better
 
 (add-hook 'isearch-mode-end-hook 'my-goto-match-beginning)
 (defun my-goto-match-beginning ()
-  (when (and isearch-forward (not isearch-mode-end-hook-quit)) (goto-char isearch-other-end)))
+  (when (and isearch-forward (not isearch-mode-end-hook-quit)) 
+    (goto-char isearch-other-end)))
 
 ;;  (defun my-goto-match-beginning ()
 ;;    (when isearch-forward (goto-char isearch-other-end)))
@@ -53,5 +58,14 @@
 ;; Scrolling down
 (global-set-key (quote [M-down]) (quote scroll-up-line))
 (global-set-key (quote [M-up]) (quote scroll-down-line))
+
+
+;; scroll one line at a time (less "jumpy" than defaults)
+
+;; (setq mouse-wheel-scroll-amount '(1 ((shift) . 1))) ;; one line at a time
+;; (setq mouse-wheel-progressive-speed nil) ;; don't accelerate scrolling
+;; (setq mouse-wheel-follow-mouse t) ;; scroll window under mouse
+;; (setq scroll-step 1) ;; keyboard scroll one line at a time
+;; (setq scroll-conservatively 10000)
 
 ;;; navigation.el ends here

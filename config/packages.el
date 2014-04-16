@@ -45,7 +45,11 @@
     auto-complete-clang
     autopair
     ecb
-    expand-region)
+    expand-region
+    projectile
+    smooth-scrolling
+    ;; smooth-scroll
+    )
    "A list of packages to ensure are installed at launch.")
 
 (dolist (p prelude-packages)
@@ -55,3 +59,6 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; packages.el ends here
+
+
+
