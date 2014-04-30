@@ -7,8 +7,8 @@
 ;;; Code:
 
 ;; Let's use some global variables
-(setq vendor-path "~/.emacs.d/vendor/")
-(setq config-path "~/.emacs.d/config/")
+;; (setq vendor-path "~/.emacs.d/vendor/")
+;; (setq config-path "~/.emacs.d/config/")
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

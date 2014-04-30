@@ -8,7 +8,7 @@
 (setq inhibit-startup-screen t)
 ;; No message in scratch buffer
 (setq initial-scratch-message nil)
-inhibit-startup-echo-area-message
+(inhibit-startup-echo-area-message)
 
 ;; Set cursor color to white
 ;; (set-cursor-color "#ffffff")
