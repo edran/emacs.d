@@ -38,7 +38,6 @@
 (load "~/.emacs.d/config/projectile.el")
 (load "~/.emacs.d/config/edit-server.el")
 
-
 (load "~/.emacs.d/config/general.el")
 (load "~/.emacs.d/config/look.el")
 (load "~/.emacs.d/config/navigation.el")

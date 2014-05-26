@@ -1,5 +1,5 @@
-(require 'python)
 
+(require 'python)
 (require 'ein)
 ;; M-x ein:notebooklist-open to open notebook
 

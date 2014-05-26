@@ -12,7 +12,6 @@
 (setq ido-file-extensions-order '(".org" ".md" ".py" ".h" ".cpp" ".c" ".hs" ".emacs" ".el"))
 
 (setq ido-create-new-buffer 'always)
-
 (require 'flx-ido)
 (ido-mode 1)
 (ido-everywhere 1)

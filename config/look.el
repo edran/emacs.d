@@ -17,6 +17,7 @@
   (remq 'process-kill-buffer-query-function
          kill-buffer-query-functions))
 
+
 ;; Set cursor color to white
 ;; (set-cursor-color "#ffffff")
 
@@ -94,6 +95,7 @@
 (setq truncate-partial-width-windows nil)
 ;; Add F12 to toggle line wrap
 (global-set-key (kbd "<f12>") 'toggle-truncate-lines)
+
 
 (defun toggle-margin-right ()
   "Toggle the right margin between `fill-column' or window width.
