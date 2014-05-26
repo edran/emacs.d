@@ -36,6 +36,8 @@
 (load "~/.emacs.d/config/ecb.el")
 (load "~/.emacs.d/config/expand-region.el")
 (load "~/.emacs.d/config/projectile.el")
+(load "~/.emacs.d/config/edit-server.el")
+
 
 (load "~/.emacs.d/config/general.el")
 (load "~/.emacs.d/config/look.el")

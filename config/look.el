@@ -5,10 +5,17 @@
 ;; INITIAL EMACS
 
 ;; No startup screen
-(setq inhibit-startup-screen t)
 ;; No message in scratch buffer
+(setq inhibit-startup-message t
+      inhibit-startup-echo-area-message t)
+
 (setq initial-scratch-message nil)
-(inhibit-startup-echo-area-message)
+
+(setq confirm-nonexistent-file-or-buffer nil)
+
+(setq kill-buffer-query-functions
+  (remq 'process-kill-buffer-query-function
+         kill-buffer-query-functions))
 
 ;; Set cursor color to white
 ;; (set-cursor-color "#ffffff")
@@ -79,7 +86,14 @@
 
 ;; Visual line mode on every buffer.  
 ;; Words don't wrap randomly
-(global-visual-line-mode 1) 
+(global-visual-line-mode nil) 
+;; disable line wrap
+
+;; (setq toggle-word-wrap)
+;; make side by side buffers function the same as the main window
+(setq truncate-partial-width-windows nil)
+;; Add F12 to toggle line wrap
+(global-set-key (kbd "<f12>") 'toggle-truncate-lines)
 
 (defun toggle-margin-right ()
   "Toggle the right margin between `fill-column' or window width.

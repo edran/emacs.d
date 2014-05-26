@@ -1,3 +1,5 @@
+(require 'python)
+
 (require 'ein)
 ;; M-x ein:notebooklist-open to open notebook
 
@@ -38,3 +40,8 @@
 
 ;; C-c , jedi:goto-definition-pop-marker
 ;; Goto the last point where jedi:goto-definition was called.
+
+;; (defun run-python2 () (interactive) (run-python "python"))
+(global-set-key [f5] 'run-python)
+
+(defun run-python3 () (interactive) (run-python "python3"))

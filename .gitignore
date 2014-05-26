@@ -4,6 +4,9 @@
 
 # Folders & files
 
+session*
+tramp
+
 auto-save-list/
 eshell/
 elpa/

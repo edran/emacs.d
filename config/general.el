@@ -72,7 +72,7 @@
 
 (setq make-backup-files nil) ; stop creating those backup~ files
 (setq auto-save-default nil) ; stop creating those #autosave# files
-(setq line-move-visual nil) ; use t for true, nil for false
+;; (setq line-move-visual t) ; use t for true, nil for false
 
 ;; Move files to trash when deleting
 (setq delete-by-moving-to-trash t)
@@ -85,6 +85,9 @@
 
 ;; TODO check which files go here...
 (setq temporary-file-directory "~/.emacs.d/tmp/")
+
+;; To edit via sudo (look at .zsh )
+(require 'tramp) 
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

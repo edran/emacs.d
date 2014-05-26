@@ -49,6 +49,11 @@
     projectile
     smooth-scrolling
     ;; smooth-scroll
+    edit-server
+    ag
+    info+
+    help+
+    help-mode+
     )
    "A list of packages to ensure are installed at launch.")
 
