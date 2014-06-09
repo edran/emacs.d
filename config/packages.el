@@ -59,6 +59,7 @@
     browse-kill-ring
     undo-tree
     magit
+    smart-mode-line
     )
    "A list of packages to ensure are installed at launch.")
 
