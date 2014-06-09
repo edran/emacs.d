@@ -121,5 +121,6 @@ height."
   (redraw-display))
 
 (require 'smart-mode-line)
-(setq sml/theme 'dark)
+(setq sml/theme 'respectful)
 (sml/setup)
+
