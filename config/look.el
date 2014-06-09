@@ -35,8 +35,9 @@
 ;; Fonts and characters
 
 ;; TODO - refactor to switch-fonts
-;;(set-frame-font "Inconsolata" 9 )
-;;(set-frame-font "Anonymous Pro 9")
+;; (set-frame-font "Inconsolata" 9 )
+;; (set-frame-font "Anonymous Pro 9")
+;; (set-frame-font "DejaVu Sans Mono 8")
 (set-frame-font "Ubuntu Mono 10")
 
 ;; Show lines and columns info
@@ -44,14 +45,19 @@
 (setq column-number-mode t)
 
 ;; display line numbers in margin
-(global-linum-mode 1)
+;; (global-linum-mode 1)
 ;; highlight text selection
 (transient-mark-mode 1)
 ; turn on highlighting current line
 (global-hl-line-mode 1)
+(set-face-background 'hl-line "#111111")
+;;  (set-face-foreground 'highlight nil)
+;; (set-face-attribute 'region nil :background "#8F7878")
+
+(setq fill-column 80)
 
 ;; Set mouse color
-(set-mouse-color "white")
+;; (set-mouse-color "white")
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -83,7 +89,6 @@
 (setq echo-keystrokes 0.1)
 
 ;; (auto-fill-mode t)
-(setq fill-column 78)
 
 ;; Visual line mode on every buffer.  
 ;; Words don't wrap randomly
@@ -114,3 +119,6 @@ height."
     (setq-default line-spacing nil)   ; no extra heigh between lines
     )
   (redraw-display))
+
+
+

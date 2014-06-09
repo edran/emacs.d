@@ -54,6 +54,11 @@
     info+
     help+
     help-mode+
+    org-ac
+    smex
+    browse-kill-ring
+    undo-tree
+    magit
     )
    "A list of packages to ensure are installed at launch.")
 

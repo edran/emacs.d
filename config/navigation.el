@@ -31,10 +31,10 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Keyset for switching between frames
 
-(global-set-key (kbd "s-<left>")  'windmove-left)
-(global-set-key (kbd "s-<right>") 'windmove-right)
-(global-set-key (kbd "s-<up>")    'windmove-up)
-(global-set-key (kbd "s-<down>")  'windmove-down)
+;;(global-set-key (kbd "s-<left>")  'windmove-left)
+;; (global-set-key (kbd "s-<right>") 'windmove-right)
+;; (global-set-key (kbd "s-<up>")    'windmove-up)
+;; (global-set-key (kbd "s-<down>")  'windmove-down)
 
 ;; (defun back-window ()
 ;;   "This is basically the opposite of 'other-window'."

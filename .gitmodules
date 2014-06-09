@@ -8,3 +8,6 @@
 [submodule "vendor/flycheck"]
 	path = vendor/flycheck
 	url = git@github.com:flycheck/flycheck.git
+[submodule "vendor/themes/base16"]
+	path = vendor/themes/base16
+	url = https://github.com/neil477/base16-emacs

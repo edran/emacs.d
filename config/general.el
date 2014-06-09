@@ -81,13 +81,26 @@
 (auto-compression-mode t)
 
 ;; (auto-fill-mode t)
-(setq fill-column 78)
+(setq fill-column 80)
 
 ;; TODO check which files go here...
 (setq temporary-file-directory "~/.emacs.d/tmp/")
 
 ;; To edit via sudo (look at .zsh )
 (require 'tramp) 
+
+(require 'smex)
+(smex-initialize)
+(global-set-key (kbd "M-x") 'smex)
+(global-set-key (kbd "M-X") 'smex-major-mode-commands)
+;; This is your old M-x.
+(global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
+
+(require 'browse-kill-ring)
+
+(require 'undo-tree)
+
+(require 'magit)
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
