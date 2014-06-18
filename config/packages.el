@@ -60,6 +60,12 @@
     undo-tree
     magit
     smart-mode-line
+    cmake-mode
+    cpputils-cmake
+    auto-complete-clang-async
+    auto-complete-c-headers
+    auto-complete-chunk
+    iedit
     )
    "A list of packages to ensure are installed at launch.")
 

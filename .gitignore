@@ -20,3 +20,6 @@ index.html
 config/ac-dict/ac-cmphist.dat
 init.el.before_ecb_2.40
 projectile-bookmarks.eld
+ede-projects.el
+projectile.cache
+semanticdb/

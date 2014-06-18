@@ -29,17 +29,19 @@
 (load "~/.emacs.d/config/guru-mode.el")
 (load "~/.emacs.d/config/haskell-mode.el")
 (load "~/.emacs.d/config/ido-mode.el")
+(load "~/.emacs.d/config/iedit.el")
 (load "~/.emacs.d/config/indent.el")
 (load "~/.emacs.d/config/ispell.el")
 (load "~/.emacs.d/config/markdown-mode.el")
 (load "~/.emacs.d/config/org-mode.el")
 (load "~/.emacs.d/config/projectile.el")
 (load "~/.emacs.d/config/python-mode.el")
+;; (load "~/.emacs.d/config/rosemacs.el")
 (load "~/.emacs.d/config/tex-mode.el")
 (load "~/.emacs.d/config/tramp-mode.el")
 (load "~/.emacs.d/config/web-mode.el")
 ;; (bind to C-o maybe?)
-;; (load "~/.emacs.d/config/yasnippet.el") TODO: fix issue with autocomplete
+(load "~/.emacs.d/config/yasnippet.el") ;; TODO: fix issue with autocomplete
 
 
 
