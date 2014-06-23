@@ -9,6 +9,14 @@
 ;; (global-set-key (kbd "C-S-a") 'beginning-of-visual-line)
 ;; (global-set-key (kbd "M-m") 'beginning-of-visual-line)
 
+;; Return to CTRL-R gives this annoying warning
+;; PROTIP: in .xinitrc:
+;; xmodmap -e 'keycode 36 = 0x1234'
+;; xmodmap -e 'add control = 0x1234'
+;; xmodmap -e 'keycode any = Return'
+;; ./xcape -e '0x1234=Return'
+(global-set-key (kbd "<key-4660>") 'ignore)
+
 ;; Undo/redo window configuration with C-c <left>/<right>
 (winner-mode 1)
 

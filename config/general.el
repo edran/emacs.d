@@ -103,5 +103,17 @@
 (require 'magit)
 
 
+(global-set-key (kbd "C-c t")
+                (lambda ()
+                  "Bring up a full-screen eshell or restore previous config."
+                  (interactive)
+                  (if (string= "eshell-mode" major-mode)
+                      (jump-to-register :eshell-fullscreen)
+                    (progn
+                      (window-configuration-to-register :eshell-fullscreen)
+                      (eshell)
+                      (delete-other-windows)))))
+
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; general.el ends here

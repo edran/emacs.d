@@ -66,6 +66,8 @@
     auto-complete-c-headers
     auto-complete-chunk
     iedit
+    ido-ubiquitous
+    howdoi
     )
    "A list of packages to ensure are installed at launch.")
 

@@ -14,3 +14,6 @@
 ;; run pylint --rcfile=~/.emacs.d/config/pylint.conf
 
 (add-hook 'prog-mode-hook 'flycheck-mode)
+
+(setq-default flycheck-clang-language-standard "c++11")
+
