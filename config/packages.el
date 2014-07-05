@@ -68,6 +68,7 @@
     iedit
     ido-ubiquitous
     howdoi
+    cmake-project
     )
    "A list of packages to ensure are installed at launch.")
 
