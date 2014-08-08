@@ -8,7 +8,7 @@
 (add-to-list 'package-archives
 	     '("melpa" . "http://melpa.milkbox.net/packages/"))
 
-(add-to-list 'package-archives 
+(add-to-list 'package-archives
     '("marmalade" .
       "http://marmalade-repo.org/packages/"))
 
@@ -28,6 +28,7 @@
     ghc
     ghci-completion
     auctex
+    flx-ido
     markdown-mode
     haskell-mode
     web-mode
@@ -67,8 +68,12 @@
     auto-complete-chunk
     iedit
     ido-ubiquitous
+    ido-vertical-mode
     howdoi
     cmake-project
+    helm
+    god-mode
+    buffer-move
     )
    "A list of packages to ensure are installed at launch.")
 
@@ -79,6 +84,3 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; packages.el ends here
-
-
-

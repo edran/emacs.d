@@ -1,3 +1,4 @@
+
 ;; Settings to make emacs nice-looking (Sure, sure...)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; INITIAL EMACS
@@ -36,7 +37,9 @@
 ;; (set-frame-font "Inconsolata" 9 )
 ;; (set-frame-font "Anonymous Pro 9")
 ;; (set-frame-font "DejaVu Sans Mono 8")
-(set-frame-font "Ubuntu Mono 11")
+(add-to-list 'default-frame-alist
+             '(font . "Ubuntu Mono 10"))
+;;(set-frame-font "Ubuntu Mono 11")
 
 ;; Show lines and columns info
 (setq line-number-mode t)

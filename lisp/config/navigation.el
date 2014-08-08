@@ -21,8 +21,8 @@
 (winner-mode 1)
 
 ;; Scrolling? TODO: check smooth-scroll vs smooth-scrolling
-(require 'smooth-scrolling)
-;; (require 'smooth-scroll)
+;; (require 'smooth-scrolling)
+(require 'smooth-scroll)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; isearch  made better
@@ -66,7 +66,7 @@
 ;; Scrolling down
 (global-set-key (quote [M-down]) (quote scroll-up-line))
 (global-set-key (quote [M-up]) (quote scroll-down-line))
-
+; (mouse-wheel-mode -1) ; no mouse
 
 ;; scroll one line at a time (less "jumpy" than defaults)
 
@@ -98,3 +98,8 @@
 (global-set-key (kbd "S-C-<right>") 'enlarge-window-horizontally)
 (global-set-key (kbd "S-C-<down>") 'shrink-window)
 (global-set-key (kbd "S-C-<up>") 'enlarge-window)
+
+(global-set-key (kbd "<M-S-up>")     'buf-move-up)
+(global-set-key (kbd "<M-S-down>")   'buf-move-down)
+(global-set-key (kbd "<M-S-left>")   'buf-move-left)
+(global-set-key (kbd "<M-S-right>")  'buf-move-right)

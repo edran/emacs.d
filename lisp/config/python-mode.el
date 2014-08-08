@@ -1,4 +1,3 @@
-
 (require 'python)
 (require 'ein)
 ;; M-x ein:notebooklist-open to open notebook
@@ -14,6 +13,7 @@
 
 ;; Standard Jedi.el setting
 (require 'jedi)
+(add-hook 'python-mode-hook 'jedi:ac-setup)
 (add-hook 'python-mode-hook 'jedi:setup)
 (setq jedi:complete-on-dot t)
 
@@ -45,3 +45,17 @@
 (global-set-key [f5] 'run-python)
 
 (defun run-python3 () (interactive) (run-python "python3"))
+
+;; Delete trailing whitespace when saving (compliance with PEP8)
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
+
+;; Make IPython the default shell
+(setq
+ python-shell-interpreter "ipython"
+ python-shell-interpreter-args ""
+ python-shell-prompt-regexp "In \\[[0-9]+\\]: "
+ python-shell-prompt-output-regexp "Out\\[[0-9]+\\]: "
+ python-shell-completion-setup-code "from IPython.core.completerlib import module_completion"
+  python-shell-completion-module-string-code "';'.join(module_completion('''%s'''))\n"
+  python-shell-completion-string-code "';'.join(get_ipython().Completer.all_completions('''%s'''))\n"
+     )
