@@ -10,7 +10,7 @@ tramp
 auto-save-list/
 eshell/
 elpa/
-config/ac-cmphist.dat
+lisp/config/ac-cmphist.dat
 tmp/*
 
 # Markdown-mode
@@ -24,4 +24,4 @@ ede-projects.el
 projectile.cache
 semanticdb/
 /url/
-/secrets.el
+lisp/secrets.el
