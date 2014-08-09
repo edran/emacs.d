@@ -74,13 +74,14 @@
     helm
     god-mode
     buffer-move
-    )
+    nlinum
+    linum-relative
+    pos-tip
+    key-chord
+    ace-jump-mode
+    ace-window)
    "A list of packages to ensure are installed at launch.")
 
 (dolist (p prelude-packages)
   (when (not (package-installed-p p))
     (package-install p)))
-
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;; packages.el ends here

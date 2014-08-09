@@ -87,7 +87,7 @@
 (setq temporary-file-directory "~/.emacs.d/tmp/")
 
 ;; To edit via sudo (look at .zsh )
-(require 'tramp) 
+(require 'tramp)
 
 (require 'smex)
 (smex-initialize)
@@ -97,8 +97,10 @@
 (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
 
 (require 'browse-kill-ring)
+(global-set-key (kbd "M-y") 'browse-kill-ring)
 
 (require 'undo-tree)
+(global-undo-tree-mode)
 
 (require 'magit)
 
@@ -124,6 +126,8 @@
 (require 'ido-vertical-mode)
 (ido-vertical-mode 1)
 
+;; MANY KEYBINDINGS
+;; some taken from emacs-prelude
 
 (global-set-key (kbd "C-c t")
                 (lambda ()
@@ -136,6 +140,61 @@
                       (eshell)
                       (delete-other-windows)))))
 
+;; Align your code in a pretty way.
+(global-set-key (kbd "C-x \\") 'align-regexp)
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;; general.el ends here
+;; Window switching. (C-x o goes to the next window)
+(global-set-key (kbd "C-x O") (lambda ()
+                                (interactive)
+                                (other-window -1))) ;; back one
+
+;; Start proced in a similar manner to dired
+(unless (eq system-type 'darwin)
+    (global-set-key (kbd "C-x p") 'proced))
+
+;; Start eshell or switch to it if it's active.
+(global-set-key (kbd "C-x m") 'eshell)
+
+;; Start a new eshell even if one is active.
+(global-set-key (kbd "C-x M") (lambda () (interactive) (eshell t)))
+
+;; Start a regular shell if you prefer that.
+(global-set-key (kbd "C-x M-m") 'shell)
+
+;; If you want to be able to M-x without meta
+(global-set-key (kbd "C-x C-m") 'smex)
+
+;; A complementary binding to the apropos-command (C-h a)
+(define-key 'help-command "A" 'apropos)
+
+;; A quick major mode help with discover-my-major
+(define-key 'help-command (kbd "C-m") 'discover-my-major)
+
+(define-key 'help-command (kbd "C-f") 'find-function)
+(define-key 'help-command (kbd "C-k") 'find-function-on-key)
+(define-key 'help-command (kbd "C-v") 'find-variable)
+(define-key 'help-command (kbd "C-l") 'find-library)
+
+;; Activate occur easily inside isearch
+(define-key isearch-mode-map (kbd "C-o")
+  (lambda () (interactive)
+    (let ((case-fold-search isearch-case-fold-search))
+      (occur (if isearch-regexp
+                 isearch-string
+               (regexp-quote isearch-string))))))
+
+;; use hippie-expand instead of dabbrev
+(global-set-key (kbd "M-/") 'hippie-expand)
+
+;; replace buffer-menu with ibuffer
+(global-set-key (kbd "C-x C-b") 'ibuffer)
+(autoload 'ibuffer "ibuffer" "List buffers." t)
+
+(global-set-key (kbd "C-x g") 'magit-status)
+
+(global-set-key (kbd "C-c j") 'ace-jump-mode)
+(global-set-key (kbd "s-.") 'ace-jump-mode)
+(global-set-key (kbd "C-c J") 'ace-jump-buffer)
+(global-set-key (kbd "s->") 'ace-jump-buffer)
+
+(global-set-key [remap other-window] 'ace-window)

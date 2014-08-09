@@ -17,6 +17,9 @@
 ;; ./xcape -e '0x1234=Return'
 (global-set-key (kbd "<key-4660>") 'ignore)
 
+(require 'fuzzy)
+(turn-on-fuzzy-isearch)
+
 ;; Undo/redo window configuration with C-c <left>/<right>
 (winner-mode 1)
 
@@ -29,7 +32,7 @@
 
 (add-hook 'isearch-mode-end-hook 'my-goto-match-beginning)
 (defun my-goto-match-beginning ()
-  (when (and isearch-forward (not isearch-mode-end-hook-quit)) 
+  (when (and isearch-forward (not isearch-mode-end-hook-quit))
     (goto-char isearch-other-end)))
 
 ;;  (defun my-goto-match-beginning ()

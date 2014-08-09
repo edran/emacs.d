@@ -46,7 +46,11 @@
 (setq column-number-mode t)
 
 ;; display line numbers in margin
-;; (global-linum-mode 1)
+
+(global-linum-mode 1)
+(require 'linum-relative)
+;; Show real number line
+(setq linum-relative-current-symbol "")
 ;; highlight text selection
 (transient-mark-mode 1)
 ; turn on highlighting current line
@@ -91,9 +95,9 @@
 
 ;; (auto-fill-mode t)
 
-;; Visual line mode on every buffer.  
+;; Visual line mode on every buffer.
 ;; Words don't wrap randomly
-(global-visual-line-mode nil) 
+(global-visual-line-mode nil)
 ;; disable line wrap
 
 ;; (setq toggle-word-wrap)
@@ -125,5 +129,3 @@ height."
 ;; (load-theme 'smart-mode-line-respectful)
 (sml/setup)
 (sml/apply-theme 'respectful)
-
-
