@@ -2,7 +2,7 @@
 
 (let ((default-directory "~/.emacs.d/lisp/"))
   (normal-top-level-add-subdirs-to-load-path))
-
-(load "~/.emacs.d/lisp/secrets.el")
-
+(add-to-list 'load-path "~/.emacs.d/vendor")
+(setq custom-file "~/.emacs.d/lisp/secrets.el")
+(load custom-file)
 (load  "~/.emacs.d/lisp/local-config.el")
