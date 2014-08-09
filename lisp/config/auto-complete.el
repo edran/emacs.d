@@ -9,18 +9,24 @@
 (ac-config-default)
 (global-auto-complete-mode t)
 
-(define-key ac-menu-map 
-  (kbd "M-n") 'ac-next) 
+(define-key ac-menu-map
+  (kbd "M-n") 'ac-next)
 
-(define-key ac-menu-map 
+(define-key ac-menu-map
   (kbd "M-p") 'ac-previous)
 
-(setq ac-auto-show-menu 0.8) 
+(setq ac-auto-show-menu 0.8)
 (setq ac-delay 0.1)
 
 (ac-set-trigger-key "TAB")
 (ac-set-trigger-key "<tab>")
 
+(require 'popup-pos-tip)
+(defadvice popup-tip
+  (around popup-pos-tip-wrapper (string &rest args) activate)
+  (if (eq window-system 'x)
+      (apply 'popup-pos-tip string args)
+    ad-do-it))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Haskell Mode
@@ -53,25 +59,25 @@
   (require 'auto-complete-clang)
   (add-to-list 'ac-sources 'ac-source-c-headers)
   (add-to-list 'ac-sources 'ac-source-clang)
-  (add-to-list 'achead:include-directories 
+  (add-to-list 'achead:include-directories
                '"/usr/lib/gcc/x86_64-linux-gnu/4.6/include")
-  (add-to-list 'achead:include-directories 
+  (add-to-list 'achead:include-directories
                '"/opt/ros/hydro/include")
-(add-to-list 'achead:include-directories 
+(add-to-list 'achead:include-directories
              '"/usr/include/c++/4.6")
-(add-to-list 'achead:include-directories 
+(add-to-list 'achead:include-directories
              '"/usr/include/c++/4.6/x86_64-linux-gnu/.")
-(add-to-list 'achead:include-directories 
+(add-to-list 'achead:include-directories
              '"/usr/include/c++/4.6/backward")
-(add-to-list 'achead:include-directories 
+(add-to-list 'achead:include-directories
              '"/usr/lib/gcc/x86_64-linux-gnu/4.6/include")
-(add-to-list 'achead:include-directories 
+(add-to-list 'achead:include-directories
              '"/usr/local/include")
-(add-to-list 'achead:include-directories 
+(add-to-list 'achead:include-directories
              '"/usr/lib/gcc/x86_64-linux-gnu/4.6/include-fixed")
-(add-to-list 'achead:include-directories 
+(add-to-list 'achead:include-directories
              '"/usr/include/x86_64-linux-gnu")
-(add-to-list 'achead:include-directories 
+(add-to-list 'achead:include-directories
              '"/usr/include")
   ;; (require 'auto-complete-chunk) ;; Probably useful with python?
   )
@@ -125,5 +131,5 @@
 (global-ede-mode 1)
 (ede-enable-generic-projects) ;; Remember to do ede-customize-project RET
 
-;; (ede-cpp-root-project "some_project" :file "/some/dir/main.cpp" 
+;; (ede-cpp-root-project "some_project" :file "/some/dir/main.cpp"
 ;;                       :include-path '("../include"))
