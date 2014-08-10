@@ -81,7 +81,8 @@
     ace-jump-mode
     ace-window
     rainbow-mode
-    rainbow-delimiters)
+    rainbow-delimiters
+    multiple-cursors)
    "A list of packages to ensure are installed at launch.")
 
 (dolist (p prelude-packages)
