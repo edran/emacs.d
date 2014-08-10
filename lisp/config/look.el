@@ -125,7 +125,7 @@ height."
     )
   (redraw-display))
 
-(load-theme 'higher-hc-zenburn t)
+(load-theme 'hc-zenburn t)
 
 (require 'smart-mode-line)
 ;; (load-theme 'smart-mode-line-respectful)
