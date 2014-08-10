@@ -1,4 +1,3 @@
-
 ;; Settings to make emacs nice-looking (Sure, sure...)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; INITIAL EMACS
@@ -102,7 +101,8 @@
 
 ;; (setq toggle-word-wrap)
 ;; make side by side buffers function the same as the main window
-(setq truncate-partial-width-windows nil)
+;; (setq truncate-partial-width-windows nil)
+;; (setq truncate-lines nil)
 ;; Add F12 to toggle line wrap
 (global-set-key (kbd "<f12>") 'toggle-truncate-lines)
 
@@ -124,6 +124,8 @@ height."
     (setq-default line-spacing nil)   ; no extra heigh between lines
     )
   (redraw-display))
+
+(load-theme 'higher-hc-zenburn t)
 
 (require 'smart-mode-line)
 ;; (load-theme 'smart-mode-line-respectful)

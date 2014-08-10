@@ -1,7 +1,7 @@
 [submodule "vendor/haskell-mode"]
 	path = vendor/haskell-mode
 	url = git@github.com:haskell/haskell-mode.git
-	
+
 [submodule "vendor/themes/solarized"]
 	path = vendor/themes/solarized
 	url = git@github.com:edran/emacs-color-theme-solarized
@@ -14,3 +14,6 @@
 [submodule "vendor/themes/zenburn"]
 	path = vendor/themes/zenburn
 	url = https://github.com/bbatsov/zenburn-emacs
+[submodule "vendor/themes/hc-zenburn-emacs"]
+	path = vendor/themes/hc-zenburn-emacs
+	url = git@github.com:edran/hc-zenburn-emacs

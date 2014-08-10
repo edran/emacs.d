@@ -79,7 +79,9 @@
     pos-tip
     key-chord
     ace-jump-mode
-    ace-window)
+    ace-window
+    rainbow-mode
+    rainbow-delimiters)
    "A list of packages to ensure are installed at launch.")
 
 (dolist (p prelude-packages)
