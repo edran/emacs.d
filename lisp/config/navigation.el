@@ -25,8 +25,10 @@
 
 ;; Scrolling? TODO: check smooth-scroll vs smooth-scrolling
 ;; (require 'smooth-scrolling)
-(require 'smooth-scroll)
-
+;; (require 'smooth-scroll)
+;; (setq scroll-step 1)
+    (setq scroll-conservatively 10000)
+;;    (setq auto-window-vscroll nil)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; isearch  made better
 
@@ -67,17 +69,8 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;; Scrolling down
-(global-set-key (quote [M-down]) (quote scroll-up-line))
-(global-set-key (quote [M-up]) (quote scroll-down-line))
-; (mouse-wheel-mode -1) ; no mouse
-
-;; scroll one line at a time (less "jumpy" than defaults)
-
-;; (setq mouse-wheel-scroll-amount '(1 ((shift) . 1))) ;; one line at a time
-;; (setq mouse-wheel-progressive-speed nil) ;; don't accelerate scrolling
-;; (setq mouse-wheel-follow-mouse t) ;; scroll window under mouse
-;; (setq scroll-step 1) ;; keyboard scroll one line at a time
-;; (setq scroll-conservatively 10000)
+(global-set-key (kbd "M-n")    'scroll-up-line)
+(global-set-key (kbd "M-p")    'scroll-down-line)
 
 ;;; navigation.el ends here
 
@@ -102,12 +95,12 @@
 (global-set-key (kbd "S-C-<down>") 'shrink-window)
 (global-set-key (kbd "S-C-<up>") 'enlarge-window)
 
-(global-set-key (kbd "<M-S-up>")     'buf-move-up)
-(global-set-key (kbd "<M-S-down>")   'buf-move-down)
-(global-set-key (kbd "<M-S-left>")   'buf-move-left)
-(global-set-key (kbd "<M-S-right>")  'buf-move-right)
+(global-set-key (kbd "M-P")     'buf-move-up)
+(global-set-key (kbd "M-N")   'buf-move-down)
+(global-set-key (kbd "M-B")   'buf-move-left)
+(global-set-key (kbd "M-F")  'buf-move-right)
 
-(global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
+(global-set-key (kbd "C-C C-C") 'mc/edit-lines)
 (global-set-key (kbd "C->") 'mc/mark-next-like-this)
 (global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
 (global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)

@@ -21,7 +21,7 @@
 (ac-set-trigger-key "TAB")
 (ac-set-trigger-key "<tab>")
 
-(require 'popup-pos-tip)
+;; (require 'popup-pos-tip)
 (defadvice popup-tip
   (around popup-pos-tip-wrapper (string &rest args) activate)
   (if (eq window-system 'x)
@@ -133,3 +133,9 @@
 
 ;; (ede-cpp-root-project "some_project" :file "/some/dir/main.cpp"
 ;;                       :include-path '("../include"))
+
+(global-set-key (kbd "M-C-I") 'ac-fuzzy-complete) ;; Meh.
+(custom-set-variables
+ '(ac-use-fuzzy t))
+
+(global-set-key (kbd "M-i") 'hippie-expand)

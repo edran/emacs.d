@@ -21,7 +21,7 @@
 (when (not package-archive-contents)
   (package-refresh-contents))
 
-(defvar prelude-packages
+(defvar personal-packages
   '(flycheck
     flycheck-color-mode-line
     auto-complete
@@ -82,9 +82,10 @@
     ace-window
     rainbow-mode
     rainbow-delimiters
-    multiple-cursors)
+    multiple-cursors
+    ido-at-point)
    "A list of packages to ensure are installed at launch.")
 
-(dolist (p prelude-packages)
+(dolist (p personal-packages)
   (when (not (package-installed-p p))
     (package-install p)))

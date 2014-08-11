@@ -1,26 +1,33 @@
 (require 'ido)
-(setq ido-enable-flex-matching t)
-(setq ido-everywhere t)
-(ido-mode 1) 
-
-;; Make ido guess the context for FFAP
-(setq ido-use-filename-at-point 'guess) 
-;; Always create a new buffer if name doesn't match
-(setq ido-create-new-buffer 'always)
-;; files to emphasize
-(setq ido-file-extensions-order '(".org" ".md" ".py" ".h" ".cpp" ".c" ".hs" ".emacs" ".el"))
-
-(setq ido-create-new-buffer 'always)
 (require 'flx-ido)
+
 (ido-mode 1)
-(ido-everywhere 1)
+(set-default 'imenu-auto-rescan t)
+
+(setq ido-enable-prefix nil
+      ido-enable-flex-matching t
+      ido-case-fold nil
+      ido-auto-merge-work-directories-length -1
+      ido-create-new-buffer 'always
+      ido-use-filename-at-point nil
+      ido-max-prospects 10
+      ido-use-faces nil
+      ido-ignore-extensions t)
+
+(ido-ubiquitous-mode 1)
 (flx-ido-mode 1)
-;; disable ido faces to see flx highlights.
-(setq ido-use-faces nil)
+(ido-vertical-mode 1)
+(ido-at-point-mode)
 
+(defmacro ido-ubiquitous-use-new-completing-read (cmd package)
+  `(eval-after-load ,package
+     '(defadvice ,cmd (around ido-ubiquitous-new activate)
+        (let ((ido-ubiquitous-enable-compatibility nil))
+          ad-do-it))))
 
-;; Ignore some extensions (check completion-ignored-extensions)
- (setq ido-ignore-extensions t) 
+(ido-ubiquitous-use-new-completing-read webjump 'webjump)
+(ido-ubiquitous-use-new-completing-read yas-expand 'yasnippet)
+(ido-ubiquitous-use-new-completing-read yas-visit-snippet-file 'yasnippet)
 
 ;; C-b	Reverts to the old switch-buffer completion engine	Buffers
 ;; C-f	Reverts to the old find-file completion engine	Files

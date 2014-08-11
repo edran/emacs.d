@@ -109,7 +109,10 @@
 (defun my-update-cursor ()
   (setq cursor-type (if (or god-local-mode buffer-read-only)
                         'box
-                      'bar)))
+                      'bar))
+  (set-cursor-color (if (or god-local-mode buffer-read-only)
+                        "#ffffff"
+                      "#FF0000")))
 
 (add-hook 'god-mode-enabled-hook 'my-update-cursor)
 (add-hook 'god-mode-disabled-hook 'my-update-cursor)
@@ -122,9 +125,7 @@
 ;; (global-set-key (kbd "C-x C-3") 'split-window-right)
 ;; (global-set-key (kbd "C-x C-0") 'delete-window)
 
-(require 'ido-ubiquitous-autoloads)
-(require 'ido-vertical-mode)
-(ido-vertical-mode 1)
+;; (require 'ido-ubiquitous-autoloads)
 
 ;; MANY KEYBINDINGS
 ;; some taken from emacs-prelude

@@ -46,10 +46,10 @@
 
 ;; display line numbers in margin
 
-(global-linum-mode 1)
-(require 'linum-relative)
-;; Show real number line
-(setq linum-relative-current-symbol "")
+;; (global-linum-mode 1)
+;; (require 'linum-relative)
+;; ;; Show real number line
+;; (setq linum-relative-current-symbol "")
 ;; highlight text selection
 (transient-mark-mode 1)
 ; turn on highlighting current line
@@ -67,11 +67,12 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Parentheses highlighted
 
-(require 'paren)
-(show-paren-mode t)
+;; (require 'paren)
 (setq show-paren-delay 0)
-(set-face-background 'show-paren-match (face-background 'default))
-(set-face-foreground 'show-paren-match "#def")
+(show-paren-mode t)
+
+;; (set-face-background 'show-paren-match (face-background 'default))
+;; (set-face-foreground 'show-paren-match "#def")
 (set-face-attribute 'show-paren-match nil :weight 'extra-bold)
 
 (defadvice show-paren-function
