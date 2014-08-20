@@ -131,4 +131,5 @@ height."
 (require 'smart-mode-line)
 ;; (load-theme 'smart-mode-line-respectful)
 (sml/setup)
+;; (sml/use-projectile-p t)
 (sml/apply-theme 'respectful)

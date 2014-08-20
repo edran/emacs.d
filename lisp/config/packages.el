@@ -44,7 +44,8 @@
     yasnippet
     auto-complete-auctex
     auto-complete-clang
-    autopair
+    ;; autopair
+    smartparens
     ecb
     expand-region
     projectile
@@ -83,7 +84,9 @@
     rainbow-mode
     rainbow-delimiters
     multiple-cursors
-    ido-at-point)
+    ido-at-point
+    guide-key
+    diminish)
    "A list of packages to ensure are installed at launch.")
 
 (dolist (p personal-packages)

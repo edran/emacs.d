@@ -6,3 +6,4 @@
 (setq custom-file "~/.emacs.d/lisp/customs.el")
 (load custom-file)
 (load  "~/.emacs.d/lisp/local-config.el")
+(put 'set-goal-column 'disabled nil)

@@ -1,19 +1,20 @@
 .emacs.d
 ========
 
-Pretty much an always in-progress config. Currently also very slow at startup because of many redundant loads and no autoload use. Will be refactored at some point.
+Pretty much an always in-progress config. Currently also very slow at
+startup because of many redundant loads and no autoload use. Will be
+refactored at some point.
+
+Seriously.
 
 Requirements
 ------------
 (TODO: actually document this.)
-* xcape (for god-mode esc switch)
-
-* Haskell autocomplete stuff
-* Latex stuff
-
-Python:
+ * xcape (for god-mode esc switch)
+ * Haskell autocomplete stuff
+ * Latex stuff (??)
  * Flake8
- * Jedi is used for autocompletion
+ * hlint
 
 Installation
 ------------
@@ -34,3 +35,4 @@ TODOs
 * Configure thesaurus for texts modes
 * Document more stuff.
 * Refactor *everything* to autoload.
+* Install perspective @nex3/perspective-el
