@@ -10,7 +10,7 @@
 
 (add-hook 'haskell-mode-hook 'turn-on-haskell-doc-mode)
 
-;; (add-hook 'haskell-mode-hook 'turn-on-haskell-indentation)
+(add-hook 'haskell-mode-hook 'turn-on-haskell-indentation)
 ;; (add-hook 'haskell-mode-hook 'turn-on-haskell-indent)
 ;; (add-hook 'haskell-mode-hook 'turn-on-haskell-simple-indent)
 
@@ -44,7 +44,7 @@
   (add-hook hook 'turn-on-haskell-doc-mode)
   (add-hook hook (lambda () (subword-mode +1))))
 
-(add-hook 'haskell-mode-hook 'turn-on-hi2)
+;; (add-hook 'haskell-mode-hook 'turn-on-hi2)
 
 ;; (add-hook 'haskell-mode-hook 'haskell-auto-insert-module-template)
 
