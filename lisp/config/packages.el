@@ -86,7 +86,8 @@
     multiple-cursors
     ido-at-point
     guide-key
-    diminish)
+    diminish
+    hi2)
    "A list of packages to ensure are installed at launch.")
 
 (dolist (p personal-packages)
