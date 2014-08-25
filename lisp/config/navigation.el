@@ -72,7 +72,7 @@
 (global-set-key (kbd "M-n")    'scroll-up-line)
 (global-set-key (kbd "M-p")    'scroll-down-line)
 
-;;; navigation.el ends here
+(global-set-key [f9] 'neotree-toggle)
 
 (defun vsplit-last-buffer ()
   (interactive)

@@ -87,7 +87,8 @@
     ido-at-point
     guide-key
     diminish
-    hi2)
+    hi2
+    neotree)
    "A list of packages to ensure are installed at launch.")
 
 (dolist (p personal-packages)

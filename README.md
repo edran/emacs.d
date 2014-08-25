@@ -11,10 +11,9 @@ Requirements
 ------------
 (TODO: actually document this.)
  * xcape (for god-mode esc switch)
- * Haskell autocomplete stuff
  * Latex stuff (??)
  * Flake8
- * hlint
+ * hlint, happy, hasktags, stylish-haskell, cabal (>=1.18) and ghc-mod
 
 Installation
 ------------
