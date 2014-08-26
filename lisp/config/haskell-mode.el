@@ -26,8 +26,8 @@
   '(haskell-process-suggest-remove-import-lines t)
   '(haskell-process-auto-import-loaded-modules t)
   '(haskell-process-log t)
-  '(haskell-process-type 'cabal-repl)
-  ;; '(haskell-process-type 'ghci)if cabal --version < 1.18
+  ;;  '(haskell-process-type 'cabal-repl)
+  '(haskell-process-type 'ghci) ;; if cabal --version < 1.18
   )
 
 (dolist (hook '(haskell-mode-hook inferior-haskell-mode-hook haskell-interactive-mode-hook))
