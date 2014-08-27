@@ -45,7 +45,7 @@
     auto-complete-auctex
     auto-complete-clang
     ;; autopair
-    smartparens
+    ;; smartparens
     ecb
     expand-region
     projectile
@@ -73,7 +73,7 @@
     howdoi
     cmake-project
     helm
-    god-mode
+    ;; god-mode
     buffer-move
     nlinum
     linum-relative

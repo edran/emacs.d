@@ -49,7 +49,7 @@
      (define-key haskell-mode-map (kbd "C-c C-c") 'haskell-process-cabal-build)
      (define-key haskell-mode-map (kbd "C-c C-k") 'haskell-interactive-mode-clear)
      (define-key haskell-mode-map (kbd "C-c c") 'haskell-process-cabal)
-     (define-key haskell-mode-map (kbd "SPC") 'haskell-mode-contextual-space)
+     (define-key haskell-mode-map (kbd "<space>") 'haskell-mode-contextual-space)
      (define-key haskell-mode-map (kbd "C-c h") 'hoogle)
      (define-key haskell-mode-map (kbd "C-o") 'open-line)))
 

@@ -17,3 +17,9 @@
 [submodule "vendor/themes/hc-zenburn-emacs"]
 	path = vendor/themes/hc-zenburn-emacs
 	url = git@github.com:edran/hc-zenburn-emacs
+[submodule "vendor/god-mode"]
+	path = vendor/god-mode
+	url = git@github.com:chrisdone/god-mode
+[submodule "vendor/smartparens"]
+	path = vendor/smartparens
+	url = git@github.com:Fuco1/smartparens
