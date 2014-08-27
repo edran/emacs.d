@@ -2,10 +2,14 @@
 (require 'god-mode)
 (global-set-key (kbd "<escape>") 'god-mode-all)
 (defun my-update-cursor ()
-  (setq cursor-type (if (or god-local-mode buffer-read-only)
+  (setq cursor-type (if (or (not god-global-mode)
+                            god-local-mode
+                            buffer-read-only)
                         'box
                       'bar))
-  (set-cursor-color (if (or god-local-mode buffer-read-only)
+  (set-cursor-color (if (or (not god-global-mode)
+                            god-local-mode
+                            buffer-read-only)
                         "#ffffff"
                       "#FF0000")))
 

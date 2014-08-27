@@ -39,7 +39,7 @@
 (load "~/.emacs.d/lisp/config/org-mode.el")
 (load "~/.emacs.d/lisp/config/projectile.el")
 (load "~/.emacs.d/lisp/config/python-mode.el")
-;;(load "~/.emacs.d/lisp/config/smartparens.el")
+;; (load "~/.emacs.d/lisp/config/smartparens.el")
 (load "~/.emacs.d/lisp/config/tex-mode.el")
 (load "~/.emacs.d/lisp/config/tramp-mode.el")
 (load "~/.emacs.d/lisp/config/web-mode.el")
