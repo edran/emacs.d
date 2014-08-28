@@ -179,5 +179,5 @@
 
 (global-set-key [remap other-window] 'ace-window)
 
-(require 'rainbow-delimiters)
-(global-rainbow-delimiters-mode)
+;;(require 'rainbow-delimiters)
+;;(global-rainbow-delimiters-mode)
