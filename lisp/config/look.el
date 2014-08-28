@@ -17,7 +17,7 @@
 (if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
 (if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
 
-;; (defadvice save-buffers-kill-emacs (around no-query-kill-emacs activate)
+n;; (defadvice save-buffers-kill-emacs (around no-query-kill-emacs activate)
 ;;   "Prevent annoying \"Active processes exist\" query when you quit Emacs."
 ;;   (cl-flet ((process-list ())) ad-do-it))
 
@@ -88,6 +88,7 @@ height."
 
 (require 'git-gutter-fringe+)
 (global-git-gutter+-mode 1)
+(setq git-gutter-fr+-side 'right-fringe)
 (git-gutter-fr+-minimal)
 
 ;;make sure ansi colour character escapes are honoured
