@@ -26,7 +26,7 @@
 
 (defadvice save-buffers-kill-emacs (around no-query-kill-emacs activate)
   "Prevent annoying \"Active processes exist\" query when you quit Emacs."
-  (flet ((process-list ())) ad-do-it))
+  (cl-flet ((process-list ())) ad-do-it))
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -128,10 +128,8 @@ height."
 
 (load-theme 'hc-zenburn t)
 
-(require 'smart-mode-line)
-;; (load-theme 'smart-mode-line-respectful)
 (sml/setup)
-;; (sml/use-projectile-p t)
+(declare-function sml/apply-theme "smart-mode-line.el")
 (sml/apply-theme 'respectful)
 
 (add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
