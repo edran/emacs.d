@@ -3,7 +3,10 @@
       initial-scratch-message nil
       confirm-nonexistent-file-or-buffer nil
       line-number-mode t
-      column-number-mode t)
+      column-number-mode t
+      frame-title-format "%b")
+
+(setq-default display-buffer-reuse-frames t)
 
 (setq kill-buffer-query-functions
   (remq 'process-kill-buffer-query-function
@@ -82,3 +85,11 @@ height."
 
 (add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
 (add-hook 'prog-mode-hook 'rainbow-identifiers-mode)
+
+(require 'git-gutter-fringe+)
+(global-git-gutter+-mode 1)
+(git-gutter-fr+-minimal)
+
+;;make sure ansi colour character escapes are honoured
+(require 'ansi-color)
+(ansi-color-for-comint-mode-on)

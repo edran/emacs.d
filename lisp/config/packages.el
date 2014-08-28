@@ -26,6 +26,7 @@
     flycheck-color-mode-line
     auto-complete
     ghc
+    moe-theme
     ghci-completion
     auctex
     flx-ido
@@ -91,7 +92,8 @@
     guide-key
     diminish
     hi2
-    neotree)
+    neotree
+    git-gutter-fringe+)
    "A list of packages to ensure are installed at launch.")
 
 (dolist (p personal-packages)
