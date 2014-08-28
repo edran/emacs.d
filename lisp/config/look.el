@@ -17,7 +17,7 @@
 (if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
 (if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
 
-n;; (defadvice save-buffers-kill-emacs (around no-query-kill-emacs activate)
+;; (defadvice save-buffers-kill-emacs (around no-query-kill-emacs activate)
 ;;   "Prevent annoying \"Active processes exist\" query when you quit Emacs."
 ;;   (cl-flet ((process-list ())) ad-do-it))
 
@@ -35,18 +35,6 @@ n;; (defadvice save-buffers-kill-emacs (around no-query-kill-emacs activate)
 
 (show-paren-mode t)
 (set-face-attribute 'show-paren-match nil :weight 'extra-bold)
-
-(defadvice show-paren-function
-  (after show-matching-paren-offscreen activate)
-  "If the matching paren is offscreen, show the matching line in
-        the echo area. Has no effect if the character before
-        point is not of the syntax class ')'."
-  (interactive)
-  (let* ((cb (char-before (point)))
-	 (matching-text (and cb
-			     (char-equal (char-syntax cb) ?\) )
-			     (blink-matching-open))))
-    (when matching-text (message matching-text))))
 
 ;; Show keystrokes in progress
 (setq echo-keystrokes 0.1)
