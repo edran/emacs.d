@@ -33,8 +33,10 @@
 (setq fill-column 80)
 (add-hook 'prog-mode-hook 'column-enforce-mode)
 
+(require 'paren)
 (show-paren-mode t)
 (set-face-attribute 'show-paren-match nil :weight 'extra-bold)
+(setq show-paren-style 'expression) ;; uncomment if annoying
 
 ;; Show keystrokes in progress
 (setq echo-keystrokes 0.1)

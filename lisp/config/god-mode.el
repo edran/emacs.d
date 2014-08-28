@@ -6,15 +6,32 @@
                             god-local-mode
                             buffer-read-only)
                         'box
-                      'bar))
-  (set-cursor-color (if (or (not god-global-mode)
-                            god-local-mode
-                            buffer-read-only)
-                        "#ffffff"
-                      "#FF0000")))
+                      'bar)))
 
 (add-hook 'god-mode-enabled-hook 'my-update-cursor)
 (add-hook 'god-mode-disabled-hook 'my-update-cursor)
+
+;; TODO: change hl-line-face instead of modeline (or both?)
+
+(defun god-mode-update-cursor-colour ()
+  (let ((limited-colors-p (> 257 (length (defined-colors)))))
+    (cond (god-local-mode (progn
+                            (set-face-background 'mode-line
+                                                 (if limited-colors-p
+                                                     "white" "#202020"))
+                            (set-face-background 'mode-line-inactive
+                                                 (if limited-colors-p
+                                                     "white" "#2D2D2D"))))
+          (t (progn
+               (set-face-background 'mode-line
+                                    (if limited-colors-p
+                                        "black" "#8b0000"))
+               (set-face-background 'mode-line-inactive
+                                    (if limited-colors-p
+                                        "black" "#2D2D2D"))))))) ;; Hack
+
+(add-hook 'god-mode-enabled-hook 'god-mode-update-cursor-colour)
+(add-hook 'god-mode-disabled-hook 'god-mode-update-cursor-colour)
 
 (define-key god-local-mode-map (kbd "z") 'repeat)
 (define-key god-local-mode-map (kbd "i") 'god-local-mode)
