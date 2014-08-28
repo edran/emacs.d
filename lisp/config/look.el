@@ -1,78 +1,36 @@
-;; Settings to make emacs nice-looking (Sure, sure...)
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; INITIAL EMACS
-
-;; No startup screen
-;; No message in scratch buffer
 (setq inhibit-startup-message t
-      inhibit-startup-echo-area-message t)
-
-(setq initial-scratch-message nil)
-
-(setq confirm-nonexistent-file-or-buffer nil)
+      inhibit-startup-echo-area-message t
+      initial-scratch-message nil
+      confirm-nonexistent-file-or-buffer nil
+      line-number-mode t
+      column-number-mode t)
 
 (setq kill-buffer-query-functions
   (remq 'process-kill-buffer-query-function
          kill-buffer-query-functions))
-
-
-;; Set cursor color to white
-;; (set-cursor-color "#ffffff")
 
 ;; Set clean graphic startup environment
 (if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
 (if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
 (if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
 
-(defadvice save-buffers-kill-emacs (around no-query-kill-emacs activate)
-  "Prevent annoying \"Active processes exist\" query when you quit Emacs."
-  (cl-flet ((process-list ())) ad-do-it))
+;; (defadvice save-buffers-kill-emacs (around no-query-kill-emacs activate)
+;;   "Prevent annoying \"Active processes exist\" query when you quit Emacs."
+;;   (cl-flet ((process-list ())) ad-do-it))
 
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; Fonts and characters
-
-;; TODO - refactor to switch-fonts
-;; (set-frame-font "Inconsolata" 9 )
-;; (set-frame-font "Anonymous Pro 9")
-;; (set-frame-font "DejaVu Sans Mono 8")
 (add-to-list 'default-frame-alist
-             '(font . "Ubuntu Mono 10"))
-;;(set-frame-font "Ubuntu Mono 11")
+             '(font . "Menlo 8"))
 
-;; Show lines and columns info
-(setq line-number-mode t)
-(setq column-number-mode t)
-
-;; display line numbers in margin
-
-;; (global-linum-mode 1)
-;; (require 'linum-relative)
-;; ;; Show real number line
-;; (setq linum-relative-current-symbol "")
-;; highlight text selection
+;; ;; highlight text selection
 (transient-mark-mode 1)
-; turn on highlighting current line
+
+;; ; turn on highlighting current line
 (global-hl-line-mode 1)
-(set-face-background 'hl-line "#111111")
-;;  (set-face-foreground 'highlight nil)
-;; (set-face-attribute 'region nil :background "#8F7878")
 
 (setq fill-column 80)
+(add-hook 'prog-mode-hook 'column-enforce-mode)
 
-;; Set mouse color
-;; (set-mouse-color "white")
-
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; Parentheses highlighted
-
-;; (require 'paren)
-(setq show-paren-delay 0)
 (show-paren-mode t)
-
-;; (set-face-background 'show-paren-match (face-background 'default))
-;; (set-face-foreground 'show-paren-match "#def")
 (set-face-attribute 'show-paren-match nil :weight 'extra-bold)
 
 (defadvice show-paren-function
@@ -87,23 +45,12 @@
 			     (blink-matching-open))))
     (when matching-text (message matching-text))))
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; Various
-
 ;; Show keystrokes in progress
 (setq echo-keystrokes 0.1)
 
-;; (auto-fill-mode t)
-
 ;; Visual line mode on every buffer.
-;; Words don't wrap randomly
 (global-visual-line-mode nil)
-;; disable line wrap
 
-;; (setq toggle-word-wrap)
-;; make side by side buffers function the same as the main window
-;; (setq truncate-partial-width-windows nil)
-;; (setq truncate-lines nil)
 ;; Add F12 to toggle line wrap
 (global-set-key (kbd "<f12>") 'toggle-truncate-lines)
 
@@ -127,6 +74,7 @@ height."
   (redraw-display))
 
 (load-theme 'hc-zenburn t)
+;; (load-theme 'sanityinc-solarized-light t)
 
 (sml/setup)
 (declare-function sml/apply-theme "smart-mode-line.el")
@@ -134,4 +82,3 @@ height."
 
 (add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
 (add-hook 'prog-mode-hook 'rainbow-identifiers-mode)
-;; (global-rainbow-delimiters-mode) ;; breaks non-prog modes

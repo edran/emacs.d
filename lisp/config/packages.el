@@ -37,6 +37,7 @@
     fill-column-indicator
     epc
     python-environment
+    column-enforce-mode
     jedi
     python-django
     smartrep
@@ -78,6 +79,7 @@
     nlinum
     linum-relative
     pos-tip
+    powerline
     key-chord
     ace-jump-mode
     ace-window
