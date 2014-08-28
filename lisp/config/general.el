@@ -178,6 +178,3 @@
 (global-set-key (kbd "s->") 'ace-jump-buffer)
 
 (global-set-key [remap other-window] 'ace-window)
-
-;;(require 'rainbow-delimiters)
-;;(global-rainbow-delimiters-mode)

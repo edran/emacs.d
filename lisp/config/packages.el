@@ -83,6 +83,7 @@
     ace-window
     rainbow-mode
     rainbow-delimiters
+    rainbow-identifiers
     multiple-cursors
     ido-at-point
     guide-key

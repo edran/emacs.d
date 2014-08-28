@@ -133,3 +133,7 @@ height."
 (sml/setup)
 ;; (sml/use-projectile-p t)
 (sml/apply-theme 'respectful)
+
+(add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
+(add-hook 'prog-mode-hook 'rainbow-identifiers-mode)
+;; (global-rainbow-delimiters-mode) ;; breaks non-prog modes
