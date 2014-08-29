@@ -93,7 +93,10 @@
     diminish
     hi2
     neotree
-    git-gutter-fringe+)
+    git-gutter-fringe+
+    dired+
+    dired-details+
+    dash)
    "A list of packages to ensure are installed at launch.")
 
 (dolist (p personal-packages)

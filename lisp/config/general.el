@@ -1,40 +1,22 @@
-;;; package -- Summary:
-;;; Commentary:
-
-;;; Code:
-
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; UTF-8 please
-
 (setq locale-coding-system 'utf-8) ; pretty
 (set-terminal-coding-system 'utf-8) ; pretty
 (set-keyboard-coding-system 'utf-8) ; pretty
 (set-selection-coding-system 'utf-8) ; please
 (prefer-coding-system 'utf-8) ; with sugar on top
 
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Save a list of recent files visited.
 ;; (open recent file with C-x f)
-
 (require 'recentf)
 (recentf-mode 1)
 (setq recentf-max-saved-items 100) ;; just 20 is too recent
 
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;Settings for M-x compile
-
 (require 'compile)
 ;; Shut up compile saves
 (setq compilation-ask-about-save nil)
 ;; Don't save *anything*
 (setq compilation-save-buffers-predicate '(lambda () nil))
-
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; A modern behaviour for emacs
 
 ;; Delete selected text when typing
 (delete-selection-mode 1)
@@ -53,11 +35,6 @@
 
 ;; Auto refresh buffers
 (global-auto-revert-mode 1)
-
-;; Also auto refresh dired, but be quiet about it
-(require 'autorevert)
-(setq global-auto-revert-non-file-buffers t)
-(setq auto-revert-verbose nil)
 
 ;; Sentences do not need double spaces to end. Period.
 (set-default 'sentence-end-double-space nil)
@@ -88,6 +65,7 @@
 
 ;; To edit via sudo (look at .zsh )
 (require 'tramp)
+(setq tramp-default-method "ssh")
 
 (require 'smex)
 (smex-initialize)
@@ -104,7 +82,8 @@
 
 (require 'magit)
 
-;; (require 'ido-ubiquitous-autoloads)
+(require 'uniquify)
+(setq uniquify-buffer-name-style (quote post-forward-angle-brackets))
 
 ;; MANY KEYBINDINGS
 ;; some taken from emacs-prelude
