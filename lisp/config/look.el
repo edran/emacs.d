@@ -4,7 +4,10 @@
       confirm-nonexistent-file-or-buffer nil
       line-number-mode t
       column-number-mode t
-      frame-title-format "%b")
+      frame-title-format "%b"
+      font-lock-maximum-decoration t
+      show-trailing-whitespace t ;; should be useless given clean up on save
+      )
 
 (setq-default display-buffer-reuse-frames t)
 
@@ -31,7 +34,7 @@
 (global-hl-line-mode 1)
 
 (setq fill-column 80)
-(add-hook 'prog-mode-hook 'column-enforce-mode)
+(add-hook 'prog-mode-hook 'column-enforce-mode) ;; ugly, fix pls
 
 (require 'paren)
 (show-paren-mode t)
