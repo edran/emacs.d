@@ -13,11 +13,11 @@
 
 (setenv "PATH" (concat "~/.cabal/bin:" (getenv "PATH")))
 (add-to-list 'exec-path "~/.cabal/bin")
-(custom-set-variables '(haskell-tags-on-save t))
+;; (custom-set-variables '(haskell-tags-on-save t))
 
-(autoload 'ghc-init "ghc" nil t)
-(autoload 'ghc-debug "ghc" nil t)
-(add-hook 'haskell-mode-hook (lambda () (ghc-init)))
+;; (autoload 'ghc-init "ghc" nil t)
+;; (autoload 'ghc-debug "ghc" nil t)
+;; (add-hook 'haskell-mode-hook (lambda () (ghc-init)))
 
 ;; (add-hook 'haskell-mode-hook 'inf-haskell-mode)
 
@@ -31,7 +31,8 @@
   ;; '(haskell-hoogle-command "hoogle --color --info")
   )
 
-(dolist (hook '(haskell-mode-hook inferior-haskell-mode-hook haskell-interactive-mode-hook))
+(dolist (hook '(haskell-mode-hook
+                inferior-haskell-mode-hook haskell-interactive-mode-hook))
   (add-hook hook 'turn-on-haskell-doc-mode)
   (add-hook hook (lambda () (subword-mode +1))))
 

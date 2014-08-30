@@ -24,6 +24,8 @@
 (defvar personal-packages
   '(flycheck
     flycheck-color-mode-line
+    flycheck-haskell
+    flycheck-pos-tip
     auto-complete
     ghc
     moe-theme
