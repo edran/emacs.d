@@ -60,6 +60,9 @@
 ;; (auto-fill-mode t)
 (setq fill-column 80)
 
+(setq paragraph-start "\f\\|[ \t]*$\\|[-*] +.+$"
+          paragraph-separate "$")
+
 ;; TODO check which files go here...
 (setq temporary-file-directory "~/.emacs.d/tmp/")
 
