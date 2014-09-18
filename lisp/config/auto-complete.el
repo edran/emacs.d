@@ -127,9 +127,9 @@
 
 (add-hook 'c-mode-common-hook 'my:add-semantic-to-autocomplete)
 
-(require 'ede)
-(global-ede-mode 1)
-(ede-enable-generic-projects) ;; Remember to do ede-customize-project RET
+;; (require 'ede)
+;; (global-ede-mode 1)
+;; (ede-enable-generic-projects) ;; Remember to do ede-customize-project RET
 
 ;; (ede-cpp-root-project "some_project" :file "/some/dir/main.cpp"
 ;;                       :include-path '("../include"))

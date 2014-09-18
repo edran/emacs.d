@@ -28,3 +28,4 @@ lisp/secrets.el
 .mc-lists.el
 ac-comphist.dat
 *flycheck_*
+/bookmarks

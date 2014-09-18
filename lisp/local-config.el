@@ -28,7 +28,7 @@
 (load "~/.emacs.d/lisp/config/flycheck.el")
 (load "~/.emacs.d/lisp/config/god-mode.el")
 (load "~/.emacs.d/lisp/config/guide-key.el")
-(load "~/.emacs.d/lisp/config/guru-mode.el")
+;; (load "~/.emacs.d/lisp/config/guru-mode.el")
 (load "~/.emacs.d/lisp/config/haskell-mode.el")
 (load "~/.emacs.d/lisp/config/ido-mode.el")
 (load "~/.emacs.d/lisp/config/iedit.el")
@@ -53,7 +53,4 @@
 (load "~/.emacs.d/lisp/config/look.el")
 (load "~/.emacs.d/lisp/config/navigation.el")
 (load "~/.emacs.d/lisp/config/diminish.el")
-(find-file "~/Dropbox/org/life.org")
-
-
-;;; local-config.el ends here
+(find-file "~/Dropbox/org/gtd.org")
