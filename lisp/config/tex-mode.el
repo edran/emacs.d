@@ -1,37 +1,33 @@
 ;; (add-to-list 'load-path "~/.emacd.d/vendor/auctex/")
 
-;; (load "auctex.el" nil t t) ;; loads tex-site in such a way so that it can be undone              
-;; (load "preview-latex.el" nil t t) ;; actual preview-latex   
-
 (require 'tex)
 (require 'latex)
 
 
-(setq TeX-PDF-mode t)                                                                            
-(setq TeX-auto-save t)                                                                           
-(setq TeX-parse-self t)                                                                          
-(setq-default TeX-master nil)                                                                    
-(setq TeX-PDF-mode t)
+(setq TeX-auto-save t)
+(setq TeX-parse-self t)
+(setq-default TeX-master nil)
+(TeX-PDF-mode t)
 
-;; (add-hook 'LaTeX-mode-hook 'flyspell-mode)                                                       
-(add-hook 'LaTeX-mode-hook 'LaTeX-math-mode)                                                     
-(add-hook 'LaTeX-mode-hook 'turn-on-reftex)                                                      
+;; (add-hook 'LaTeX-mode-hook 'flyspell-mode)
+(add-hook 'LaTeX-mode-hook 'LaTeX-math-mode)
+(add-hook 'LaTeX-mode-hook 'turn-on-reftex)
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Start flyspell
 
 (add-hook 'LaTeX-mode-hook 'flyspell-mode)
-(add-hook 'LaTeX-mode-hook 'flyspell-buffer)                               
+(add-hook 'LaTeX-mode-hook 'flyspell-buffer)
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Outline Mode
 
-;; C-c C-o C-l - Hide all the contents of your current section 
+;; C-c C-o C-l - Hide all the contents of your current section
 ;; C-c C-o C-n - Next unit of document
 ;; C-c C-o C-p - Previous unit of document
-;; C-c C-o C-a - Show all 
+;; C-c C-o C-a - Show all
 
 (require 'outline)
 

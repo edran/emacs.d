@@ -38,6 +38,15 @@
                       ("@rad" . ?r)
                       ))
 
+(add-hook 'org-mode-hook
+      '(lambda ()
+         (setq org-file-apps
+           '((auto-mode . emacs)
+             ("\\.mm\\'" . default)
+             ("\\.x?html?\\'" . default)
+             ("\\.pdf\\'" . "evince %s")))))
+
+;; (add-hook 'org-mode-hook 'writegood-mode)
 
 (global-set-key "\C-cl" 'org-store-link)
 (global-set-key "\C-cc" 'org-capture)
@@ -45,3 +54,4 @@
 (global-set-key "\C-cb" 'org-iswitchb)
 
 (setq org-log-done t)
+(add-hook 'org-mode-hook 'turn-on-flyspell)

@@ -66,6 +66,11 @@
 ;; TODO check which files go here...
 (setq temporary-file-directory "~/.emacs.d/tmp/")
 
+(require 'saveplace)
+(setq save-place-file "~/.emacs.d/saveplace")
+(setq-default save-place t)
+
+
 ;; To edit via sudo (look at .zsh )
 (require 'tramp)
 (setq tramp-default-method "ssh")

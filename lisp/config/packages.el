@@ -98,7 +98,9 @@
     git-gutter-fringe+
     dired+
     dired-details+
-    dash)
+    dash
+    writegood-mode
+    writeroom-mode)
    "A list of packages to ensure are installed at launch.")
 
 (dolist (p personal-packages)

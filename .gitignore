@@ -29,3 +29,4 @@ lisp/secrets.el
 ac-comphist.dat
 *flycheck_*
 /bookmarks
+/saveplace
