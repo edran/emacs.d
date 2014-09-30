@@ -24,6 +24,9 @@
 ;; Highlighting keystrokes like other editors
 (transient-mark-mode t)
 
+;; Delete trailing whitespace when saving (compliance with PEP8 and others)
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
+
 ;; Enable x clipoard (TODO will it work with emacsclient too?)
 (setq x-select-enable-clipboard t)
 
