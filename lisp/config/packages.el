@@ -100,7 +100,8 @@
     dired-details+
     dash
     writegood-mode
-    writeroom-mode)
+    writeroom-mode
+    virtualenvwrapper)
    "A list of packages to ensure are installed at launch.")
 
 (dolist (p personal-packages)

@@ -58,3 +58,8 @@
 (global-set-key [f5] 'run-python)
 
 (defun run-python3 () (interactive) (run-python "python3"))
+
+(require 'virtualenvwrapper)
+(venv-initialize-interactive-shells) ;; if you want interactive shell support
+(venv-initialize-eshell) ;; if you want eshell support
+;; (setq venv-location "/path/to/your/virtualenvs/") ;; see secrets.el
