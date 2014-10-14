@@ -28,6 +28,7 @@
 (ido-ubiquitous-use-new-completing-read webjump 'webjump)
 (ido-ubiquitous-use-new-completing-read yas-expand 'yasnippet)
 (ido-ubiquitous-use-new-completing-read yas-visit-snippet-file 'yasnippet)
+(setq ido-save-directory-list-file "~/.emacs.d/.ido.last")
 
 ;; C-b	Reverts to the old switch-buffer completion engine	Buffers
 ;; C-f	Reverts to the old find-file completion engine	Files

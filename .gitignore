@@ -30,3 +30,7 @@ ac-comphist.dat
 *flycheck_*
 /bookmarks
 /saveplace
+/.ido.last
+/.recentf
+/.saveplace
+/.smex-items
