@@ -43,7 +43,6 @@ if [ -z "$(which pyenv)" ] ; then
     pip install --install-option="--user" virtualenv
     pip install --install-option="--user" stevedore
     pip install --install-option="--user" virtualenvwrapper
-
 fi
 
 echo "============ Dev install, done"
@@ -51,6 +50,11 @@ echo "============ Dev install, done"
 if [ -z "$(which cmus)" ] ; then
     echo "++++++ Installing cmus"
     sudo apt-get install cmus
+fi
+
+if [ -z "$(which xmonad)" ] ; then
+    echo "++++++ Installing xmonad"
+    sudo apt-get install xmonad xmonad-contrib gnome-panel
 fi
 
 echo "============ Common install, done"
