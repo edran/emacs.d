@@ -1,15 +1,12 @@
 .emacs.d
 ========
 
-Pretty much an always in-progress config. Currently also very slow at
-startup because of many redundant loads and no autoload use. Will be
-refactored at some point.
-
-Seriously.
+Personal emacs configuration. Currently very slow and potentially
+unstable. Use at your own risk.
 
 Requirements
 ------------
-(TODO: actually document this.)
+
  * xcape (for god-mode esc switch)
  * Latex stuff (??)
  * Flake8
@@ -22,7 +19,7 @@ Installation
 git clone --recursive git@github.com/edran/emacs.d ~/.emacs.d
 ```
 
-Then make init.sh run at startup somehow (xinitrc, xsession, etc.)
+init.sh is used to disable caps lock and add Esc with xcape
 
 In emacs:
 * M-x jedi:install-server
