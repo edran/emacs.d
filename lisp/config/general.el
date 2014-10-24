@@ -84,8 +84,6 @@
 (global-set-key (kbd "M-x") 'smex)
 (global-set-key (kbd "M-X") 'smex-major-mode-commands)
 (setq smex-save-file "~/.emacs.d/.smex-items")
-;; This is your old M-x.
-(global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
 
 (require 'browse-kill-ring)
 (global-set-key (kbd "M-y") 'browse-kill-ring)
@@ -101,16 +99,18 @@
 ;; MANY KEYBINDINGS
 ;; some taken from emacs-prelude
 
-(global-set-key (kbd "C-c t")
-                (lambda ()
-                  "Bring up a full-screen eshell or restore previous config."
-                  (interactive)
-                  (if (string= "eshell-mode" major-mode)
-                      (jump-to-register :eshell-fullscreen)
-                    (progn
-                      (window-configuration-to-register :eshell-fullscreen)
-                      (eshell)
-                      (delete-other-windows)))))
+(defun me/eshell ()
+  "Bring up a full-screen eshell or restore previous config."
+  (interactive)
+  (if (string= "eshell-mode" major-mode)
+      (jump-to-register :eshell-fullscreen)
+    (progn
+      (window-configuration-to-register :eshell-fullscreen)
+      (eshell)
+      (delete-other-windows))))
+
+(global-set-key (kbd "C-c t") 'me/eshell)
+
 
 ;; Align your code in a pretty way.
 (global-set-key (kbd "C-x \\") 'align-regexp)
