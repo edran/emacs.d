@@ -7,7 +7,7 @@
 (setq TeX-auto-save t)
 (setq TeX-parse-self t)
 (setq-default TeX-master nil)
-(TeX-PDF-mode t)
+(tex-pdf-mode t)
 
 ;; (add-hook 'LaTeX-mode-hook 'flyspell-mode)
 (add-hook 'LaTeX-mode-hook 'LaTeX-math-mode)
@@ -74,6 +74,16 @@
 	LaTeX-section-section
 	LaTeX-section-label))
 
+;; use evince for dvi and pdf viewer
+;; evince-dvi backend should be installed
+(setq TeX-view-program-selection
+      '((output-dvi "DVI Viewer")
+        (output-pdf "PDF Viewer")
+        (output-html "Google Chrome")))
+(setq TeX-view-program-list
+      '(("DVI Viewer" "evince %o")
+        ("PDF Viewer" "evince %o")
+        ("Google Chrome" "google-chrome %o")))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Preview-latex
