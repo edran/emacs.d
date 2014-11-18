@@ -1,4 +1,5 @@
 (require 'org)
+(require 'org-capture)
 
 ;; (require 'org-ac) ;; breaks god-mode
 ;; (org-ac/config-default)
@@ -8,12 +9,10 @@
   (quote
    ("~/Dropbox/org")))
 (setq org-default-notes-file (concat org-directory "/notes.org"))
-(add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
 
 (setq org-todo-keywords
       (quote ((sequence "TODO(t)" "NEXT(n)" "|" "DONE(d)")
-              (sequence "WAITING(w@/!)" "HOLD(h@/!)" "|"
-                        "CANCELLED(c@/!)"))))
+              (sequence "WAITING(w@/!)" "HOLD(h@/!)" "|" "CANCELLED(c@/!)"))))
 
 (setq org-todo-state-tags-triggers
       (quote (("CANCELLED" ("CANCELLED" . t))
@@ -53,5 +52,6 @@
 (global-set-key "\C-ca" 'org-agenda)
 (global-set-key "\C-cb" 'org-iswitchb)
 
+(setq org-cycle-separator-lines 0)
 (setq org-log-done t)
 (add-hook 'org-mode-hook 'turn-on-flyspell)
