@@ -8,6 +8,7 @@
 ;; Save a list of recent files visited.
 ;; (open recent file with C-x f)
 (require 'recentf)
+(setq recentf-save-file "~/.emacs.d/.recentf")
 (recentf-mode 1)
 (setq recentf-max-saved-items 100) ;; just 20 is too recent
 
@@ -33,9 +34,6 @@
 ;; Make sure I only have to use y o n
 (defalias 'yes-or-no-p 'y-or-n-p)
 
-;; add newline with c-n at EOL
-(setq next-line-add-newlines t)
-
 ;; Auto refresh buffers
 (global-auto-revert-mode 1)
 
@@ -49,7 +47,6 @@
 ;; To refactor
 
 (setq default-directory "~/")
-
 (setq make-backup-files nil) ; stop creating those backup~ files
 (setq auto-save-default nil) ; stop creating those #autosave# files
 ;; (setq line-move-visual t) ; use t for true, nil for false
@@ -73,17 +70,15 @@
 (setq save-place-file "~/.emacs.d/.saveplace")
 (setq-default save-place t)
 
-(setq recentf-save-file "~/.emacs.d/.recentf")
-
 ;; To edit via sudo (look at .zsh )
 (require 'tramp)
 (setq tramp-default-method "ssh")
 
 (require 'smex)
+(setq smex-save-file "~/.emacs.d/.smex-items")
 (smex-initialize)
 (global-set-key (kbd "M-x") 'smex)
 (global-set-key (kbd "M-X") 'smex-major-mode-commands)
-(setq smex-save-file "~/.emacs.d/.smex-items")
 
 (require 'browse-kill-ring)
 (global-set-key (kbd "M-y") 'browse-kill-ring)
@@ -111,7 +106,6 @@
 
 (global-set-key (kbd "C-c t") 'me/eshell)
 
-
 ;; Align your code in a pretty way.
 (global-set-key (kbd "C-x \\") 'align-regexp)
 
@@ -124,31 +118,13 @@
 (unless (eq system-type 'darwin)
     (global-set-key (kbd "C-x p") 'proced))
 
-;; Start eshell or switch to it if it's active.
-(global-set-key (kbd "C-x m") 'eshell)
-
-;; Start a new eshell even if one is active.
-(global-set-key (kbd "C-x M") (lambda () (interactive) (eshell t)))
-
-;; Start a regular shell if you prefer that.
-(global-set-key (kbd "C-x M-m") 'shell)
-
-;; If you want to be able to M-x without meta
-(global-set-key (kbd "C-x C-m") 'smex)
-
 ;; A complementary binding to the apropos-command (C-h a)
 (define-key 'help-command "A" 'apropos)
-
-;; A quick major mode help with discover-my-major
-(define-key 'help-command (kbd "C-m") 'discover-my-major)
 
 (define-key 'help-command (kbd "C-f") 'find-function)
 (define-key 'help-command (kbd "C-k") 'find-function-on-key)
 (define-key 'help-command (kbd "C-v") 'find-variable)
 (define-key 'help-command (kbd "C-l") 'find-library)
-
-;; use hippie-expand instead of dabbrev
-(global-set-key (kbd "M-/") 'hippie-expand)
 
 ;; replace buffer-menu with ibuffer
 (global-set-key (kbd "C-x C-b") 'ibuffer)
@@ -157,11 +133,7 @@
 (global-set-key (kbd "C-x g") 'magit-status)
 
 (global-set-key (kbd "C-c j") 'ace-jump-mode)
-(global-set-key (kbd "s-.") 'ace-jump-mode)
-(global-set-key (kbd "C-c J") 'ace-jump-buffer)
-(global-set-key (kbd "s->") 'ace-jump-buffer)
-
-(global-set-key [remap other-window] 'ace-window)
+(global-set-key (kbd "C-c M-.") 'ace-jump-mode)
 
 (global-set-key (kbd "C-x r q") 'save-buffers-kill-terminal)
 (global-set-key (kbd "C-x C-c") 'delete-frame)
