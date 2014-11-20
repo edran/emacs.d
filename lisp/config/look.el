@@ -27,9 +27,6 @@
 (add-to-list 'default-frame-alist
              '(font . "Menlo 8"))
 
-;; ;; highlight text selection
-(transient-mark-mode 1)
-
 ;; ; turn on highlighting current line
 (global-hl-line-mode 1)
 

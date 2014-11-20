@@ -1,6 +1,6 @@
 (require 'org)
 (require 'org-capture)
-
+(require 'org-agenda)
 ;; (require 'org-ac) ;; breaks god-mode
 ;; (org-ac/config-default)
 
@@ -45,6 +45,9 @@
              ("\\.x?html?\\'" . default)
              ("\\.pdf\\'" . "evince %s")))))
 
+(setq org-agenda-custom-commands
+      '(("f" occur-tree "FIXME")))
+
 ;; (add-hook 'org-mode-hook 'writegood-mode)
 
 (global-set-key "\C-cl" 'org-store-link)
@@ -52,6 +55,7 @@
 (global-set-key "\C-ca" 'org-agenda)
 (global-set-key "\C-cb" 'org-iswitchb)
 
-(setq org-cycle-separator-lines 0)
+(setq org-cycle-separator-lines 1)
+(setq org-catch-invisible-edits 'error)
 (setq org-log-done t)
 (add-hook 'org-mode-hook 'turn-on-flyspell)

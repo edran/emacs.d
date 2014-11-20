@@ -101,7 +101,13 @@
     dash
     writegood-mode
     writeroom-mode
-    virtualenvwrapper)
+    virtualenvwrapper
+    znc
+    erc-colorize
+    erc-image
+    erc-tweet
+    erc-hl-nicks
+    erc-youtube)
    "A list of packages to ensure are installed at launch.")
 
 (dolist (p personal-packages)

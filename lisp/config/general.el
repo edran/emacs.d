@@ -134,6 +134,7 @@
 
 (global-set-key (kbd "C-c j") 'ace-jump-mode)
 (global-set-key (kbd "C-c M-.") 'ace-jump-mode)
+(global-set-key [remap other-window] 'ace-window)
 
 (global-set-key (kbd "C-x r q") 'save-buffers-kill-terminal)
 (global-set-key (kbd "C-x C-c") 'delete-frame)

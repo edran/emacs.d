@@ -45,6 +45,7 @@
 (load "~/.emacs.d/lisp/config/tramp-mode.el")
 (load "~/.emacs.d/lisp/config/web-mode.el")
 (load "~/.emacs.d/lisp/config/yasnippet.el")
+(load "~/.emacs.d/lisp/config/erc-mode.el")
 
 ;; (bind to C-o maybe?)
 ;; (load "~/.emacs.d/config/fill-column-indicator.el")
