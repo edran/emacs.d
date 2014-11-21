@@ -30,8 +30,8 @@
                                     (if limited-colors-p
                                         "black" "#2D2D2D"))))))) ;; Hack
 
-(add-hook 'god-mode-enabled-hook 'god-mode-update-cursor-colour)
-(add-hook 'god-mode-disabled-hook 'god-mode-update-cursor-colour)
+;; (add-hook 'god-mode-enabled-hook 'god-mode-update-cursor-colour)
+;; (add-hook 'god-mode-disabled-hook 'god-mode-update-cursor-colour)
 
 (define-key god-local-mode-map (kbd "z") 'repeat)
 (define-key god-local-mode-map (kbd "i") 'god-local-mode)

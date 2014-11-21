@@ -1,3 +1,16 @@
+;; (load-theme 'noctilux)
+;; (load-theme 'solarized-dark)
+(require 'powerline)
+(require 'moe-theme)
+(moe-dark)
+(moe-theme-set-color 'w/b)
+(powerline-center-theme)
+(powerline-moe-theme)
+(global-nlinum-mode 1)
+;; (sml/setup)
+;; (declare-function sml/apply-theme "smart-mode-line.el")
+;; (sml/apply-theme 'respectful)
+
 (setq inhibit-startup-message t
       inhibit-startup-echo-area-message t
       initial-scratch-message nil
@@ -42,11 +55,10 @@
 (setq echo-keystrokes 0.1)
 
 ;; Visual line mode on every buffer.
-(global-visual-line-mode nil)
+;; (global-visual-line-mode nil)
 
 ;; Add F12 to toggle line wrap
 (global-set-key (kbd "<f12>") 'toggle-truncate-lines)
-
 
 (defun toggle-margin-right ()
   "Toggle the right margin between `fill-column' or window width.
@@ -66,12 +78,7 @@ height."
     )
   (redraw-display))
 
-(load-theme 'hc-zenburn t)
-;; (load-theme 'sanityinc-solarized-light t)
-
-(sml/setup)
-(declare-function sml/apply-theme "smart-mode-line.el")
-(sml/apply-theme 'respectful)
+;; (load-theme 'cyberpunk t)
 
 (add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
 (add-hook 'prog-mode-hook 'rainbow-identifiers-mode)
