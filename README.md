@@ -11,7 +11,7 @@ Requirements
  * Latex stuff (??)
  * Flake8
  * hlint, happy, hasktags, stylish-haskell, cabal (>=1.18) and ghc-mod
-
+ * C/C++ stuff (??)
 Installation
 ------------
 
@@ -27,8 +27,9 @@ In emacs:
 TODOs
 -----
 
-* write an install script
+* write an install script (In-progress[ish])
 * Configure thesaurus for texts modes
+* Install helm and take ido away
 * Document more stuff.
 * Refactor *everything* to autoload.
 * Install perspective @nex3/perspective-el

@@ -2,7 +2,6 @@
 ;;; Commentary:
 
 ;; Theme loading
-
 (load "~/.emacs.d/vendor/themes/theme.el")
 ;;; Code:
 
