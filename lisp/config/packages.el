@@ -107,6 +107,7 @@
     erc-image
     erc-tweet
     erc-hl-nicks
+    deft
     erc-youtube)
    "A list of packages to ensure are installed at launch.")
 

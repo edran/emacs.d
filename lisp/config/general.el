@@ -94,18 +94,6 @@
 ;; MANY KEYBINDINGS
 ;; some taken from emacs-prelude
 
-(defun me/eshell ()
-  "Bring up a full-screen eshell or restore previous config."
-  (interactive)
-  (if (string= "eshell-mode" major-mode)
-      (jump-to-register :eshell-fullscreen)
-    (progn
-      (window-configuration-to-register :eshell-fullscreen)
-      (eshell)
-      (delete-other-windows))))
-
-(global-set-key (kbd "C-c t") 'me/eshell)
-
 ;; Align your code in a pretty way.
 (global-set-key (kbd "C-x \\") 'align-regexp)
 

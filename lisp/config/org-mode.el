@@ -1,8 +1,18 @@
 (require 'org)
 (require 'org-capture)
 (require 'org-agenda)
+(require 'deft)
 ;; (require 'org-ac) ;; breaks god-mode
 ;; (org-ac/config-default)
+
+(when (require 'deft nil 'noerror)
+   (setq
+    deft-extension "org"
+    deft-directory "~/Dropbox/org"
+    deft-text-mode 'org-mode
+    deft-use-filename-as-title t)
+   (global-set-key (kbd "<f11>") 'deft))
+
 
 (setq org-directory "~/Dropbox/org")
 (setq org-agenda-files
@@ -59,3 +69,4 @@
 (setq org-catch-invisible-edits 'error)
 (setq org-log-done t)
 (add-hook 'org-mode-hook 'turn-on-flyspell)
+;; (setq org-image-actual-width '(200))

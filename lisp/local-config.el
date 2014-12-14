@@ -23,6 +23,7 @@
 (load "~/.emacs.d/lisp/config/ecb.el")
 (load "~/.emacs.d/lisp/config/edit-server.el")
 (load "~/.emacs.d/lisp/config/emacs-lisp-mode.el")
+(load "~/.emacs.d/lisp/config/eshell-mode.el")
 (load "~/.emacs.d/lisp/config/expand-region.el")
 (load "~/.emacs.d/lisp/config/flycheck.el")
 (load "~/.emacs.d/lisp/config/god-mode.el")
@@ -53,4 +54,4 @@
 (load "~/.emacs.d/lisp/config/look.el")
 (load "~/.emacs.d/lisp/config/navigation.el")
 (load "~/.emacs.d/lisp/config/diminish.el")
-(find-file "~/Dropbox/org/gtd.org")
+(deft)
