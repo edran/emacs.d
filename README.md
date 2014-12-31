@@ -9,6 +9,7 @@ Requirements
 
  * xcape (for god-mode esc switch)
  * Latex stuff (??)
+ * ^ dvipng
  * Flake8
  * hlint, happy, hasktags, stylish-haskell, cabal (>=1.18) and ghc-mod
  * C/C++ stuff (??)
