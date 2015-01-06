@@ -1,6 +1,6 @@
 (require 'flycheck)
 
-(add-hook 'prog-mode-hook 'flycheck-mode)
+(setq-default flycheck-emacs-lisp-load-path 'inherit)
 (setq flycheck-check-syntax-automatically '(save
                                             ;; idle-change ; I save a
                                             ;; lot anyway
@@ -30,6 +30,8 @@
 (setq flycheck-highlighting-mode 'symbols)
 (eval-after-load 'flycheck
   '(add-hook 'flycheck-mode-hook #'flycheck-haskell-setup))
+
+(add-hook 'prog-mode-hook 'flycheck-mode)
 
 ;; This got annoying quite quickly
 ;; (require 'pos-tip)
