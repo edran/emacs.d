@@ -23,3 +23,6 @@
 [submodule "vendor/smartparens"]
 	path = vendor/smartparens
 	url = git@github.com:Fuco1/smartparens
+[submodule "vendor/deft-turbo"]
+	path = vendor/deft-turbo
+	url = git@github.com:cpbotha/deft-turbo

@@ -1,18 +1,8 @@
 (require 'org)
 (require 'org-capture)
 (require 'org-agenda)
-(require 'deft)
 ;; (require 'org-ac) ;; breaks god-mode
 ;; (org-ac/config-default)
-
-(when (require 'deft nil 'noerror)
-   (setq
-    deft-extension "org"
-    deft-directory "~/Dropbox/org"
-    deft-text-mode 'org-mode
-    deft-use-filename-as-title t)
-   (global-set-key (kbd "<f11>") 'deft))
-
 
 (setq org-directory "~/Dropbox/org")
 (setq org-agenda-files
@@ -70,3 +60,7 @@
 (setq org-log-done t)
 (add-hook 'org-mode-hook 'turn-on-flyspell)
 ;; (setq org-image-actual-width '(200))
+
+(setq org-latex-create-formula-image-program 'dvipng)
+(setq org-format-latex-options (plist-put org-format-latex-options :scale 2.0))
+(setq org-src-fontify-natively t)

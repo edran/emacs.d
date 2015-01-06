@@ -20,6 +20,7 @@
 ;; (load "~/.emacs.d/lisp/config/autopair.el")
 (load "~/.emacs.d/lisp/config/cc-mode.el")
 (load "~/.emacs.d/lisp/config/dired.el")
+(load "~/.emacs.d/lisp/config/deft.el")
 (load "~/.emacs.d/lisp/config/ecb.el")
 (load "~/.emacs.d/lisp/config/edit-server.el")
 (load "~/.emacs.d/lisp/config/emacs-lisp-mode.el")

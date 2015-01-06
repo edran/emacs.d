@@ -107,7 +107,7 @@
     erc-image
     erc-tweet
     erc-hl-nicks
-    deft
+    ;; deft - It's in /vendor now.
     erc-youtube)
    "A list of packages to ensure are installed at launch.")
 
