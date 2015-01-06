@@ -126,3 +126,5 @@
 
 (global-set-key (kbd "C-x r q") 'save-buffers-kill-terminal)
 (global-set-key (kbd "C-x C-c") 'delete-frame)
+
+(add-to-list 'auto-mode-alist '("\\.m\\'" . octave-mode))
