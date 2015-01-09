@@ -8,7 +8,7 @@
 (add-hook 'c-mode-common-hook 'google-set-c-style)
 (add-hook 'c-mode-common-hook 'google-make-newline-indent)
 (require 'cmake-project)
-;; (add-to-list 'ac-sources 'ac-source-semantic) 
+;; (add-to-list 'ac-sources 'ac-source-semantic)
 ;; (add-to-list 'ac-sources 'ac-source-gtags)
 
 ;; (add-hook 'c-mode-hook
@@ -28,6 +28,8 @@
 (require 'cmake-mode)
 (setq auto-mode-alist
         (append '(("CMakeLists\\.txt\\'" . cmake-mode)
-                  ("\\.cmake\\'" . cmake-mode))     
+                  ("\\.cmake\\'" . cmake-mode))
                 auto-mode-alist))
 
+;; Sigh.
+(add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
