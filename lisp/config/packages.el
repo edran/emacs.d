@@ -24,6 +24,7 @@
 (defvar personal-packages
   '(flycheck
     flycheck-color-mode-line
+    fuzzy
     flycheck-haskell
     flycheck-pos-tip
     auto-complete
@@ -108,7 +109,8 @@
     erc-tweet
     erc-hl-nicks
     ;; deft - It's in /vendor now.
-    erc-youtube)
+    erc-youtube
+    google-c-style)
    "A list of packages to ensure are installed at launch.")
 
 (dolist (p personal-packages)
