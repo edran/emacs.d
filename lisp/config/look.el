@@ -1,4 +1,4 @@
-;; (load-theme 'noctilux)
+; (load-theme 'noctilux)
 ;; (load-theme 'solarized-dark)
 (require 'powerline)
 (require 'moe-theme)
@@ -38,7 +38,7 @@
 ;;   (cl-flet ((process-list ())) ad-do-it))
 
 (add-to-list 'default-frame-alist
-             '(font . "Menlo 8"))
+             '(font . "Menlo 9"))
 
 ;; ; turn on highlighting current line
 (global-hl-line-mode 1)
