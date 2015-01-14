@@ -14,7 +14,7 @@
 ;; Plugins
 
 (load "~/.emacs.d/lisp/config/packages.el")
-; (load "~/.emacs.d/lisp/nlinum-relative.el")
+;; (load "~/.emacs.d/lisp/nlinum-relative.el")
 (load "~/.emacs.d/lisp/config/ag.el")
 (load "~/.emacs.d/lisp/config/auto-complete.el")
 ;; (load "~/.emacs.d/lisp/config/autopair.el")
@@ -51,6 +51,7 @@
 ;; (bind to C-o maybe?)
 ;; (load "~/.emacs.d/config/fill-column-indicator.el")
 ;; (load "~/.emacs.d/config/rosemacs.el")
+
 (load "~/.emacs.d/lisp/config/general.el")
 (load "~/.emacs.d/lisp/config/look.el")
 (load "~/.emacs.d/lisp/config/navigation.el")

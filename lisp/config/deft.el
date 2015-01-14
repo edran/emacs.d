@@ -5,3 +5,4 @@
 ;; (setq deft-text-mode 'org-mode)
 (setq deft-use-filename-as-title t)
 (global-set-key (kbd "<f11>") 'deft)
+(setq deft-auto-save-interval 20.0)
