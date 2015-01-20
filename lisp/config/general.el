@@ -128,3 +128,5 @@
 (global-set-key (kbd "C-x C-c") 'delete-frame)
 
 (add-to-list 'auto-mode-alist '("\\.m\\'" . octave-mode))
+
+(global-unset-key (kbd "C-z"))
