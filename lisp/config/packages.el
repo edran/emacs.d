@@ -67,6 +67,7 @@
     flycheck-irony
     flycheck-pos-tip
     fuzzy
+    ggtags
     ghc
     ghci-completion
     git-gutter-fringe+
@@ -75,6 +76,7 @@
     guru-mode
     haskell-mode
     helm
+    helm-projectile
     help+
     help-mode+
     hi2

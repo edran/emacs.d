@@ -11,8 +11,8 @@
 ;; (Key-chord-define-global "x0"     'delete-window)
 (key-chord-define-global "xk"     'kill-this-buffer-if-not-modified)
 ; file actions
-(key-chord-define-global "bf" 'ido-switch-buffer)
-(key-chord-define-global "xf" 'ido-find-file)
+;; (key-chord-define-global "bf" 'ido-switch-buffer)
+;; (key-chord-define-global "xf" 'ido-find-file)
 (key-chord-define-global "zs" "\C-x\C-s")
 (key-chord-define-global "vc" 'vc-next-action)
 (key-chord-define-global "fd" 'me/eshell)

@@ -35,6 +35,9 @@ unstable. Use at your own risk.
  - clang (if needed)
  - `M-x irony-install-server RET`
 
+* ggtags
+ - GNU global
+
 
 ## Installation
 
@@ -47,8 +50,7 @@ init.sh is used to disable caps lock and add Esc with xcape
 TODOs
 -----
 
-* Configure thesaurus for texts modes
-* Install helm and take ido away
+* Configure thesaurus for text modes
 * Document more stuff.
 * Refactor *everything* to autoload.
 * Install perspective @nex3/perspective-el
