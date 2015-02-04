@@ -54,35 +54,29 @@
 
 ;;;;;;;;;; CC-MODEs
 
+(require 'auto-complete-clang)
 (defun my:ac-c-init()
   (require 'auto-complete-c-headers)
   (require 'auto-complete-clang)
   (add-to-list 'ac-sources 'ac-source-c-headers)
   (add-to-list 'ac-sources 'ac-source-clang)
-  (add-to-list 'achead:include-directories
-               '"/usr/lib/gcc/x86_64-linux-gnu/4.6/include")
-  (add-to-list 'achead:include-directories
-               '"/opt/ros/hydro/include")
-(add-to-list 'achead:include-directories
-             '"/usr/include/c++/4.6")
-(add-to-list 'achead:include-directories
-             '"/usr/include/c++/4.6/x86_64-linux-gnu/.")
-(add-to-list 'achead:include-directories
-             '"/usr/include/c++/4.6/backward")
-(add-to-list 'achead:include-directories
-             '"/usr/lib/gcc/x86_64-linux-gnu/4.6/include")
-(add-to-list 'achead:include-directories
-             '"/usr/local/include")
-(add-to-list 'achead:include-directories
-             '"/usr/lib/gcc/x86_64-linux-gnu/4.6/include-fixed")
-(add-to-list 'achead:include-directories
-             '"/usr/include/x86_64-linux-gnu")
-(add-to-list 'achead:include-directories
-             '"/usr/include")
+  (setq ac-clang-flags
+        (mapcar (lambda (item)(concat "-I" item))
+                (split-string
+                 "
+ /opt/ros/hydro/include
+ /usr/include/c++/4.6
+ /usr/include/c++/4.6/x86_64-linux-gnu/.
+ /usr/include/c++/4.6/backward
+ /usr/lib/gcc/x86_64-linux-gnu/4.6/include
+ /usr/local/include
+ /usr/lib/gcc/x86_64-linux-gnu/4.6/include-fixed
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+"
+                 )))
   ;; (require 'auto-complete-chunk) ;; Probably useful with python?
   )
-
-
 
 (add-hook 'c++-mode-hook 'my:ac-c-init)
 (add-hook 'c-mode-hook 'my:ac-c-init)

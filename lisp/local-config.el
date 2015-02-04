@@ -20,7 +20,6 @@
 ;; (load "~/.emacs.d/lisp/config/auto-complete.el")
 ;; (load "~/.emacs.d/lisp/config/autopair.el")
 (load "~/.emacs.d/lisp/config/cc-mode.el")
-
 (load "~/.emacs.d/lisp/config/dired.el")
 (load "~/.emacs.d/lisp/config/deft.el")
 (load "~/.emacs.d/lisp/config/ecb.el")
@@ -51,7 +50,7 @@
 (load "~/.emacs.d/lisp/config/yasnippet.el")
 ;; (load "~/.emacs.d/lisp/config/ycmd.el")
 (load "~/.emacs.d/lisp/config/erc-mode.el")
-(load "~/.emacs.d/lisp/config/irony.el")
+;; (load "~/.emacs.d/lisp/config/irony.el")
 
 ;; (bind to C-o maybe?)
 ;; (load "~/.emacs.d/config/fill-column-indicator.el")

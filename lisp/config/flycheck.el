@@ -36,7 +36,15 @@
 (setq flycheck-gcc-include-path
       '("/opt/ros/hydro/include"))
 
-;; ######## Haskell
 
+;; ######## Haskell
 (eval-after-load 'flycheck
   '(add-hook 'flycheck-mode-hook #'flycheck-haskell-setup))
+
+(add-hook 'prog-mode-hook 'flycheck-mode)
+
+;; This got annoying quite quickly
+;; (require 'pos-tip)
+;; (eval-after-load 'flycheck
+;;   '(custom-set-variables
+;;    '(flycheck-display-errors-function #'flycheck-pos-tip-error-messages)))

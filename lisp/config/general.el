@@ -130,3 +130,6 @@
 (add-to-list 'auto-mode-alist '("\\.m\\'" . octave-mode))
 
 (global-unset-key (kbd "C-z"))
+
+; roslaunch highlighting
+(add-to-list 'auto-mode-alist '("\\.launch$" . xml-mode))
