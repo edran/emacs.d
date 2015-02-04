@@ -29,6 +29,7 @@
 
 
 ;; ########### cpputils
+
 (require 'cpputils-cmake)
 (add-hook 'c-mode-common-hook
           (lambda ()
