@@ -46,6 +46,9 @@
     cmake-mode
     cmake-project
     column-enforce-mode
+    company
+    company-c-headers
+    company-irony
     cpputils-cmake
     dash
     diminish
@@ -61,6 +64,7 @@
     flycheck
     flycheck-color-mode-line
     flycheck-haskell
+    flycheck-irony
     flycheck-pos-tip
     fuzzy
     ghc
@@ -80,6 +84,7 @@
     ido-vertical-mode
     iedit
     info+
+    irony
     jedi
     key-chord
     linum-relative

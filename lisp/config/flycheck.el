@@ -32,10 +32,9 @@
 
 ;; ######## C/C++
 
-;; (setq-default flycheck-clang-language-standard "c")
-(add-hook 'c++-mode-hook (lambda ()
-                           (setq flycheck-clang-language-standard "c++11")))
-
+(setq-default flycheck-clang-language-standard "c")
+(setq flycheck-gcc-include-path
+      '("/opt/ros/hydro/include"))
 
 ;; ######## Haskell
 

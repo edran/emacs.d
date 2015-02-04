@@ -1,20 +1,42 @@
-.emacs.d
-========
+# .emacs.d
 
 Personal emacs configuration. Currently very slow and potentially
 unstable. Use at your own risk.
 
-Requirements
-------------
 
- * xcape (for god-mode esc switch)
- * Latex stuff (??)
- * ^ dvipng
- * Flake8
- * hlint, happy, hasktags, stylish-haskell, cabal (>=1.18) and ghc-mod
- * C/C++ stuff (??)
-Installation
-------------
+## Requirements
+
+* xcape (for god-mode esc switch)
+
+### LaTeX
+
+* dvipng
+
+### Python
+
+* Flake8
+* Jedi
+* `M-x jedi:install-server`
+
+### Haskell
+
+* hlint
+* happy
+* hasktags
+* stylish-haskell
+* cabal (>=1.18)
+* ghc-mod
+
+## C/C++ stuff
+
+* Irony
+ - libclang (3.4)
+ - CMake >= 2.8.5
+ - clang (if needed)
+ - `M-x irony-install-server RET`
+
+
+## Installation
 
 ```
 git clone --recursive git@github.com/edran/emacs.d ~/.emacs.d
@@ -22,13 +44,9 @@ git clone --recursive git@github.com/edran/emacs.d ~/.emacs.d
 
 init.sh is used to disable caps lock and add Esc with xcape
 
-In emacs:
-* M-x jedi:install-server
-
 TODOs
 -----
 
-* write an install script (In-progress[ish])
 * Configure thesaurus for texts modes
 * Install helm and take ido away
 * Document more stuff.
