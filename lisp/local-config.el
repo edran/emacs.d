@@ -16,7 +16,7 @@
 (load "~/.emacs.d/lisp/config/packages.el")
 ;; (load "~/.emacs.d/lisp/nlinum-relative.el")
 (load "~/.emacs.d/lisp/config/ag.el")
-(load "~/.emacs.d/lisp/config/auto-complete.el")
+;; (load "~/.emacs.d/lisp/config/auto-complete.el")
 ;; (load "~/.emacs.d/lisp/config/autopair.el")
 (load "~/.emacs.d/lisp/config/cc-mode.el")
 (load "~/.emacs.d/lisp/config/dired.el")
