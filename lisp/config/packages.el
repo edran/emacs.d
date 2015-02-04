@@ -22,95 +22,94 @@
   (package-refresh-contents))
 
 (defvar personal-packages
-  '(flycheck
-    flycheck-color-mode-line
-    fuzzy
-    flycheck-haskell
-    flycheck-pos-tip
-    auto-complete
-    ghc
-    moe-theme
-    ghci-completion
-    auctex
-    flx-ido
-    markdown-mode
-    haskell-mode
-    web-mode
-    guru-mode
-    whitespace-cleanup-mode
-    fill-column-indicator
-    epc
-    python-environment
-    column-enforce-mode
-    jedi
-    python-django
-    smartrep
-    ein
-    yasnippet
-    auto-complete-auctex
-    auto-complete-clang
+  '(
     ;; autopair
+    ;; erc-colorize
+    ;; erc-hl-nicks
+    ;; erc-image
+    ;; erc-tweet
+    ;; erc-youtube
     ;; smartparens
-    ecb
-    expand-region
-    projectile
-    smooth-scrolling
     ;; smooth-scroll
-    edit-server
-    ag
-    info+
-    help+
-    help-mode+
-    org-ac
-    smex
-    browse-kill-ring
-    undo-tree
-    magit
-    smart-mode-line
-    cmake-mode
-    cpputils-cmake
-    auto-complete-clang-async
-    auto-complete-c-headers
-    auto-complete-chunk
-    iedit
-    ido-ubiquitous
-    ido-vertical-mode
-    howdoi
-    cmake-project
-    helm
-    ;; god-mode
-    buffer-move
-    nlinum
-    linum-relative
-    pos-tip
-    powerline
-    key-chord
     ace-jump-mode
     ace-window
-    rainbow-mode
-    rainbow-delimiters
-    rainbow-identifiers
-    multiple-cursors
-    ido-at-point
-    guide-key
+    ag
+    auctex
+    auto-complete
+    auto-complete-auctex
+    auto-complete-c-headers
+    auto-complete-chunk
+    auto-complete-clang
+    auto-complete-clang-async
+    browse-kill-ring
+    buffer-move
+    cmake-mode
+    cmake-project
+    column-enforce-mode
+    cpputils-cmake
+    dash
     diminish
-    hi2
-    neotree
-    git-gutter-fringe+
     dired+
     dired-details+
-    dash
+    ecb
+    edit-server
+    ein
+    epc
+    expand-region
+    fill-column-indicator
+    flx-ido
+    flycheck
+    flycheck-color-mode-line
+    flycheck-haskell
+    flycheck-pos-tip
+    fuzzy
+    ghc
+    ghci-completion
+    git-gutter-fringe+
+    google-c-style
+    guide-key
+    guru-mode
+    haskell-mode
+    helm
+    help+
+    help-mode+
+    hi2
+    howdoi
+    ido-at-point
+    ido-ubiquitous
+    ido-vertical-mode
+    iedit
+    info+
+    jedi
+    key-chord
+    linum-relative
+    magit
+    markdown-mode
+    moe-theme
+    multiple-cursors
+    neotree
+    nlinum
+    org-ac
+    pos-tip
+    powerline
+    projectile
+    python-django
+    python-environment
+    rainbow-delimiters
+    rainbow-identifiers
+    rainbow-mode
+    smart-mode-line
+    smartrep
+    smex
+    smooth-scrolling
+    undo-tree
+    virtualenvwrapper
+    web-mode
+    whitespace-cleanup-mode
     writegood-mode
     writeroom-mode
-    virtualenvwrapper
-    znc
-    erc-colorize
-    erc-image
-    erc-tweet
-    erc-hl-nicks
-    ;; deft - It's in /vendor now.
-    erc-youtube
-    google-c-style)
+    yasnippet
+    znc)
    "A list of packages to ensure are installed at launch.")
 
 (dolist (p personal-packages)

@@ -1,15 +1,13 @@
 ; (load-theme 'noctilux)
 ;; (load-theme 'solarized-dark)
-(require 'powerline)
 (require 'moe-theme)
 (moe-dark)
 (moe-theme-set-color 'w/b)
 (powerline-center-theme)
 (powerline-moe-theme)
+
 (global-nlinum-mode 1)
-;; (sml/setup)
-;; (declare-function sml/apply-theme "smart-mode-line.el")
-;; (sml/apply-theme 'respectful)
+;; (global-relative-line-numbers-mode)
 
 (setq inhibit-startup-message t
       inhibit-startup-echo-area-message t
@@ -19,7 +17,8 @@
       column-number-mode t
       frame-title-format "%b"
       font-lock-maximum-decoration t
-      show-trailing-whitespace t ;; should be useless given clean up on save
+      ;; should be useless given clean up on save
+      show-trailing-whitespace t
       )
 
 (setq-default display-buffer-reuse-frames t)
@@ -33,18 +32,21 @@
 (if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
 (if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
 
-;; (defadvice save-buffers-kill-emacs (around no-query-kill-emacs activate)
-;;   "Prevent annoying \"Active processes exist\" query when you quit Emacs."
-;;   (cl-flet ((process-list ())) ad-do-it))
+(defadvice save-buffers-kill-emacs
+  (around no-query-kill-emacs activate)
+  "Prevent annoying \"Active processes exist\" query when you quit Emacs."
+  (cl-flet ((process-list ())) ad-do-it))
 
 (add-to-list 'default-frame-alist
+             ;; '(font . "Inconsolata 9"))
              '(font . "Menlo 9"))
 
 ;; ; turn on highlighting current line
 (global-hl-line-mode 1)
 
 (setq fill-column 80)
-(add-hook 'prog-mode-hook 'column-enforce-mode) ;; ugly, fix pls
+;;(add-hook 'prog-mode-hook 'column-enforce-mode) ;; ugly, fix pls
+(add-hook 'prog-mode-hook 'fci-mode)
 
 (require 'paren)
 (show-paren-mode t)
