@@ -20,14 +20,16 @@
 
 (setq
  ;; open helm buffer inside current window, not occupy whole other window
- helm-split-window-in-side-p           t
+ helm-split-window-in-side-p t
  ;; move to end or beginning of source when reaching top or bottom of source.
- helm-move-to-line-cycle-in-source     t
+ helm-move-to-line-cycle-in-source t
  ;; search for library in `require' and `declare-function' sexp.
- helm-ff-search-library-in-sexp        t
+ helm-ff-search-library-in-sexp t
  ;; scroll 8 lines other window using M-<next>/M-<prior>
- helm-scroll-amount                    8
+ helm-scroll-amount 8
+ helm-adaptive-history-file "~/.emacs.d/helm-history"
  helm-ff-file-name-history-use-recentf t)
+
 
 (helm-autoresize-mode t)
 

@@ -77,6 +77,7 @@
     haskell-mode
     helm
     helm-projectile
+    helm-ag
     help+
     help-mode+
     hi2
