@@ -74,11 +74,11 @@
 (require 'tramp)
 (setq tramp-default-method "ssh")
 
-(require 'smex)
-(setq smex-save-file "~/.emacs.d/.smex-items")
-(smex-initialize)
-(global-set-key (kbd "M-x") 'smex)
-(global-set-key (kbd "M-X") 'smex-major-mode-commands)
+;; (require 'smex)
+;; (setq smex-save-file "~/.emacs.d/.smex-items")
+;; (smex-initialize)
+;; (global-set-key (kbd "M-x") 'smex)
+;; (global-set-key (kbd "M-X") 'smex-major-mode-commands)
 
 (require 'browse-kill-ring)
 (global-set-key (kbd "M-y") 'browse-kill-ring)
