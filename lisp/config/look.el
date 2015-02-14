@@ -1,5 +1,7 @@
+;; (load-theme 'hc-zenburn)
 ; (load-theme 'noctilux)
 ;; (load-theme 'solarized-dark)
+
 (require 'moe-theme)
 (moe-dark)
 (moe-theme-set-color 'w/b)
