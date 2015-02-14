@@ -35,12 +35,12 @@
     ace-window
     ag
     auctex
-    auto-complete
-    auto-complete-auctex
-    auto-complete-c-headers
-    auto-complete-chunk
-    auto-complete-clang
-    auto-complete-clang-async
+    ;; auto-complete
+    ;; auto-complete-auctex
+    ;; auto-complete-c-headers
+    ;; auto-complete-chunk
+    ;; auto-complete-clang
+    ;; auto-complete-clang-async
     browse-kill-ring
     buffer-move
     cmake-mode
@@ -49,6 +49,8 @@
     company
     company-c-headers
     company-irony
+    anaconda-mode
+    company-anaconda
     cpputils-cmake
     dash
     diminish
@@ -97,7 +99,7 @@
     multiple-cursors
     neotree
     nlinum
-    org-ac
+    ;; org-ac
     pos-tip
     powerline
     projectile
