@@ -1,6 +1,7 @@
-;; (load-theme 'noctilux)
+;; (load-theme 'hc-zenburn)
+; (load-theme 'noctilux)
 ;; (load-theme 'solarized-dark)
-;; (load-theme 'molokai)
+
 (require 'moe-theme)
 (moe-dark)
 (moe-theme-set-color 'w/b)

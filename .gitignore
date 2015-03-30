@@ -37,3 +37,4 @@ ac-comphist.dat
 /erc-log/
 /irony/
 /lisp/config/.ycm_global_conf.py
+/helm-history
