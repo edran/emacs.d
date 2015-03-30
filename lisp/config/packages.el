@@ -90,7 +90,7 @@
     iedit
     info+
     irony
-    jedi
+    ;; jedi
     key-chord
     linum-relative
     magit
