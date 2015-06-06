@@ -1,6 +1,7 @@
 (require 'magit)
 
 ;; full screen magit-status
+(setq magit-last-seen-setup-instructions "1.4.0")
 
 (defadvice magit-status (around magit-fullscreen activate)
   (window-configuration-to-register :magit-fullscreen)

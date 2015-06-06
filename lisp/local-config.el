@@ -50,7 +50,7 @@
 (load "~/.emacs.d/lisp/config/web-mode.el")
 (load "~/.emacs.d/lisp/config/yasnippet.el")
 ;; (load "~/.emacs.d/lisp/config/ycmd.el")
-(load "~/.emacs.d/lisp/config/erc-mode.el")
+;; (load "~/.emacs.d/lisp/config/erc-mode.el")
 ;; (load "~/.emacs.d/lisp/config/irony.el")
 
 ;; (bind to C-o maybe?)

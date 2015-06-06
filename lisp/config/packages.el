@@ -32,6 +32,7 @@
     ;; smartparens
     ;; smooth-scroll
     ace-jump-mode
+    deft
     ace-window
     ag
     auctex
@@ -76,6 +77,7 @@
     google-c-style
     guide-key
     guru-mode
+    god-mode
     haskell-mode
     helm
     helm-projectile
