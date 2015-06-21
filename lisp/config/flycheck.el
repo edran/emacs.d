@@ -33,11 +33,13 @@
 
 ;; ######## C/C++
 
-(setq flycheck-clang-include-path
-      '("/opt/ros/indigo/include"))
+(add-hook 'c++-mode-hook
+          (lambda ()
+            (setq flycheck-gcc-include-path (list "/opt/ros/indigo/include/"))))
 (add-hook 'c++-mode-hook
           (lambda ()
             (setq flycheck-clang-language-standard "c++11")))
+
 (add-hook 'c++-mode-hook
           (lambda ()
             (setq flycheck-gcc-language-standard "c++11")))
