@@ -27,6 +27,7 @@
 (load "~/.emacs.d/lisp/config/emacs-lisp-mode.el")
 (load "~/.emacs.d/lisp/config/eshell-mode.el")
 (load "~/.emacs.d/lisp/config/expand-region.el")
+(load "~/.emacs.d/lisp/config/irony.el")
 (load "~/.emacs.d/lisp/config/company.el")
 (load "~/.emacs.d/lisp/config/flycheck.el")
 (load "~/.emacs.d/lisp/config/god-mode.el")
@@ -49,9 +50,8 @@
 (load "~/.emacs.d/lisp/config/tramp-mode.el")
 (load "~/.emacs.d/lisp/config/web-mode.el")
 (load "~/.emacs.d/lisp/config/yasnippet.el")
-;; (load "~/.emacs.d/lisp/config/ycmd.el")
 ;; (load "~/.emacs.d/lisp/config/erc-mode.el")
-;; (load "~/.emacs.d/lisp/config/irony.el")
+
 
 ;; (bind to C-o maybe?)
 ;; (load "~/.emacs.d/config/fill-column-indicator.el")

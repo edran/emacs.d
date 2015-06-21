@@ -1,7 +1,8 @@
 (require 'company)
+(require 'company-c-headers)
 
 (add-hook 'after-init-hook 'global-company-mode)
-
+(define-key company-active-map (kbd "<tab>") #'company-complete)
 
 ;; ##### C/C++
 
@@ -10,8 +11,7 @@
 (add-hook 'irony-mode-hook 'company-irony-setup-begin-commands)
 
 (add-to-list 'company-backends 'company-c-headers)
-(define-key company-active-map (kbd "<tab>") #'company-complete)
-
+(add-to-list 'company-c-headers-path-system "/usr/include/c++/4.9/")
 
 ;; ##### Python
 

@@ -38,3 +38,4 @@ ac-comphist.dat
 /irony/
 /lisp/config/.ycm_global_conf.py
 /helm-history
+/ycmd_global_conf.pyc

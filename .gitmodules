@@ -26,3 +26,6 @@
 [submodule "vendor/deft-turbo"]
 	path = vendor/deft-turbo
 	url = git@github.com:cpbotha/deft-turbo
+[submodule "vendor/ycmd"]
+	path = vendor/ycmd
+	url = git@github.com:Valloric/ycmd

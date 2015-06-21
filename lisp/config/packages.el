@@ -121,7 +121,9 @@
     writegood-mode
     writeroom-mode
     yasnippet
-    znc)
+    znc
+    ycmd
+    flycheck-ycmd)
    "A list of packages to ensure are installed at launch.")
 
 (dolist (p personal-packages)
