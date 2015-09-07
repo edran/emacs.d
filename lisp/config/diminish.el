@@ -5,7 +5,7 @@
 (diminish 'undo-tree-mode " UT")
 ;; (diminish 'guru-mode)
 (diminish 'guide-key-mode)
-(diminish 'magit-auto-revert-mode)
+;; (diminish 'magit-auto-revert-mode)
 (diminish 'projectile-mode " P")
 ;; (diminish 'autopair-mode)
 ;; (diminish 'global-whitespace-mode)

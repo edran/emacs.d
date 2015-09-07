@@ -58,14 +58,14 @@
 (global-set-key (kbd "C-c h M-:") 'helm-eval-expression-with-eldoc)
 
 
-(require 'helm-eshell)
+;; (require 'helm-eshell)
 
 (add-hook 'eshell-mode-hook
           #'(lambda ()
               (define-key eshell-mode-map (kbd "C-c C-l")  'helm-eshell-history)))
 (define-key minibuffer-local-map (kbd "C-c C-l") 'helm-minibuffer-history)
 
-(require 'helm-projectile)
+;; (require 'helm-projectile)
 (helm-projectile-on)
 
 (helm-mode 1)

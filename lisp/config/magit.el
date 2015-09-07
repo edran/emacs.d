@@ -1,4 +1,4 @@
-(require 'magit)
+;; (eval-after-load 'magit '(require 'setup-magit))
 
 ;; full screen magit-status
 (setq magit-last-seen-setup-instructions "1.4.0")
@@ -14,4 +14,5 @@
   (kill-buffer)
   (jump-to-register :magit-fullscreen))
 
-(define-key magit-status-mode-map (kbd "q") 'magit-quit-session)
+(eval-after-load 'magit '(define-key magit-status-mode-map (kbd "q")
+                           'magit-quit-session))

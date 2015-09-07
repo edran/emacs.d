@@ -1,6 +1,6 @@
-(require 'eshell)
-(require 'em-cmpl)
-(require 'em-hist)
+;; (require 'eshell)
+;; (require 'em-cmpl)
+;; (require 'em-hist)
 
 (add-hook
  'eshell-mode-hook
@@ -50,7 +50,7 @@
 
 (global-set-key (kbd "C-c t") 'me/eshell)
 
-(require 'em-smart)
+;; (require 'em-smart)
 (setq eshell-where-to-jump 'begin)
 (setq eshell-review-quick-commands nil)
 (setq eshell-smart-space-goes-to-end t)

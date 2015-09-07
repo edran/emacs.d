@@ -1,6 +1,6 @@
-(require 'org)
-(require 'org-capture)
-(require 'org-agenda)
+;; (require 'org)
+;; (require 'org-capture)
+;; (require 'org-agenda)
 ;; (require 'org-ac) ;; breaks god-mode
 ;; (org-ac/config-default)
 
@@ -62,5 +62,6 @@
 ;; (setq org-image-actual-width '(200))
 
 (setq org-latex-create-formula-image-program 'dvipng)
-(setq org-format-latex-options (plist-put org-format-latex-options :scale 2.0))
+(eval-after-load 'org-mode
+  '(setq org-format-latex-options (plist-put org-format-latex-options :scale 2.0)))
 (setq org-src-fontify-natively t)

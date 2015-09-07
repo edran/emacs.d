@@ -1,4 +1,4 @@
-(require 'web-mode)
+;; (require 'web-mode)
 
 (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.css\\'" . web-mode))
@@ -27,7 +27,7 @@
 
 ;; (defun sp-web-mode-is-code-context (id action context)
 ;;   (when (and (eq action 'insert)
-;;              (not (or (get-text-property (point) 'part-side) 
+;;              (not (or (get-text-property (point) 'part-side)
 ;;                       (get-text-property (point) 'block-side))))
 
 ;;     t))

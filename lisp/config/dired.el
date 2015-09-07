@@ -1,4 +1,4 @@
-(require 'dired+)
+;; (require 'dired+)
 
 ;; Also auto refresh dired, but be quiet about it
 (require 'autorevert)

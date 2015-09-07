@@ -1,6 +1,6 @@
 ;; REQUIRES happy and ghc-mod
 
-(require 'haskell-mode)
+;; (require 'haskell-mode)
 
 (add-hook 'haskell-mode-hook 'turn-on-haskell-doc-mode)
 
@@ -62,4 +62,5 @@
      (define-key haskell-cabal-mode-map (kbd "C-c C-c") 'haskell-process-cabal-build)
      (define-key haskell-cabal-mode-map (kbd "C-c c") 'haskell-process-cabal)))
 
-(define-key haskell-mode-map [f8] 'haskell-navigate-imports)
+(eval-after-load 'haskell-mode
+  '(define-key haskell-mode-map [f8] 'haskell-navigate-imports))

@@ -86,7 +86,7 @@
 (require 'undo-tree)
 (global-undo-tree-mode)
 
-(require 'magit)
+;; (require 'magit)
 
 (require 'uniquify)
 (setq uniquify-buffer-name-style (quote post-forward-angle-brackets))

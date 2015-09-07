@@ -1,8 +1,8 @@
-(require 'python)
-(require 'ein)
+;; (require 'python)
+;; (require 'ein)
 ;; M-x ein:notebooklist-open to open notebook
 
-(require 'ein-smartrep)
+;; (require 'ein-smartrep)
 
 ;; Standard Jedi.el setting
 ;; (require 'jedi)

@@ -1,4 +1,4 @@
-(require 'ecb)
+;; (require 'ecb)
 ;; (require 'ecb-autoloads)
 
 (setq ecb-layout-name "leftright2")
