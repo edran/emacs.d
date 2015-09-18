@@ -1,7 +1,4 @@
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; Plugins
 
-(load "~/.emacs.d/lisp/config/packages.el")
 ;; (load "~/.emacs.d/lisp/nlinum-relative.el")
 
 (load "~/.emacs.d/lisp/config/ag.el")
@@ -50,3 +47,5 @@
 (load "~/.emacs.d/lisp/config/navigation.el")
 (load "~/.emacs.d/lisp/config/diminish.el")
 (deft)
+
+(provide 'local-config)

@@ -130,3 +130,5 @@
 (dolist (p personal-packages)
   (when (not (package-installed-p p))
     (package-install p)))
+
+(provide 'packages)
