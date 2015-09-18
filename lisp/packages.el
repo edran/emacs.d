@@ -1,49 +1,29 @@
-;;; package -- Summary:
-;;; Commentary:
+;; Override packages
+(setq package-archives '(("melpa" . "http://melpa.org/packages/")
+                         ("org" . "http://orgmode.org/elpa/")
+                         ("ELPA" . "http://tromey.com/elpa/")
+                         ("gnu" . "http://elpa.gnu.org/packages/")))
 
-(require 'package)
-
-;;; Code:
-
-(add-to-list 'package-archives
-	     '("melpa" . "http://melpa.org/packages/"))
-
-(add-to-list 'package-archives
-    '("marmalade" .
-      "http://marmalade-repo.org/packages/"))
-
+;; Optimisation
+(setq package-enable-at-startup nil)
 (package-initialize)
 
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; Check packages at startup
-
+;; Check packages list at startup
 (when (not package-archive-contents)
   (package-refresh-contents))
 
 (defvar personal-packages
   '(
-    ;; autopair
-    ;; erc-colorize
-    ;; erc-hl-nicks
-    ;; erc-image
-    ;; erc-tweet
-    ;; erc-youtube
-    ;; smartparens
-    ;; smooth-scroll
+    ;; smartparens ;; TODO setup!
     ace-jump-mode
+
     deft
-    ace-window
     ag
+    ace-window ;; better other-window
     auctex
-    ;; auto-complete
-    ;; auto-complete-auctex
-    ;; auto-complete-c-headers
-    ;; auto-complete-chunk
-    ;; auto-complete-clang
-    ;; auto-complete-clang-async
     browse-kill-ring
     buffer-move
+
     cmake-mode
     cmake-project
     column-enforce-mode
