@@ -1,7 +1,7 @@
 (require 'deft)
 (setq deft-extensions '("org" "md"))
 (setq deft-default-extension "org")
-(setq deft-directory "~/Dropbox/org")
+(setq deft-directory "~/Dropbox/org/files")
 ;; (setq deft-text-mode 'org-mode)
 (setq deft-use-filename-as-title t)
 (global-set-key (kbd "<f11>") 'deft)

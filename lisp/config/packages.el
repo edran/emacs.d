@@ -123,7 +123,8 @@
     yasnippet
     znc
     ycmd
-    flycheck-ycmd)
+    flycheck-ycmd
+    lua-mode)
    "A list of packages to ensure are installed at launch.")
 
 (dolist (p personal-packages)
