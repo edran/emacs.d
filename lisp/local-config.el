@@ -1,15 +1,3 @@
-;;; package --- Summary: : Loaded from init file
-;;; Commentary:
-
-;; Theme loading
-(load "~/.emacs.d/vendor/themes/theme.el")
-;;; Code:
-
-;; Let's use some global variables
-;; (setq vendor-path "~/.emacs.d/vendor/")
-;; (setq config-path "~/.emacs.d/config/")
-
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Plugins
 

@@ -7,12 +7,26 @@
   (file-name-as-directory (concat user-emacs-directory "lisp")))
 (defvar third-party-path
   (file-name-as-directory (concat user-emacs-directory "vendor")))
+(defvar custom-themes-path
+  (file-name-as-directory (concat third-party-path "themes")))
 (defvar local-config-file
   (concat config-path "local-config.el"))
 
 ;; Add third party packages to load path
 (let ((default-directory third-party-path))
- (normal-top-level-add-subdirs-to-load-path))
+  (normal-top-level-add-subdirs-to-load-path))
+
+;; Add custom themes
+(defun add-custom-theme-dir (name)
+  (add-to-list
+   'custom-theme-load-path
+   (file-name-as-directory
+    (concat custom-themes-path name))))
+
+(mapc 'add-custom-theme-dir
+ (directory-files
+  (file-name-as-directory
+   (concat third-party-path "themes"))))
 
 ;; Keep custom config in separate file
 (setq custom-file
