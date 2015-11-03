@@ -12,33 +12,6 @@ checkout `precise` branch for 12.04 compatibility.
 
 * dvipng
 
-### Python
-
-* Flake8
-* Jedi
- - `M-x jedi:install-server`
-
-### Haskell (TODO)
-
-* hlint
-* happy
-* hasktags
-* stylish-haskell
-* cabal (>=1.18)
-* ghc-mod
-
-## C/C++ stuff
-
-* Irony
- - libclang (3.4)
- - CMake >= 2.8.5
- - clang (if needed)
- - `M-x irony-install-server RET`
-
-* ggtags (TODO, for ROS?)
- - GNU global
-
-
 ## Installation
 
 ``` git clone --recursive git@github.com/edran/emacs.d ~/.emacs.d ```
@@ -51,6 +24,6 @@ TODOs
 -----
 
 * Configure thesaurus for text modes
-* Document more stuff.
+* Install writegood-mode for essay writing
 * Refactor *everything* to autoload.
 * Install perspective @nex3/perspective-el
