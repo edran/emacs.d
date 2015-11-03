@@ -1,7 +1,6 @@
 ;; (require 'org)
 ;; (require 'org-capture)
 ;; (require 'org-agenda)
-;; (require 'org-ac) ;; breaks god-mode
 ;; (org-ac/config-default)
 
 (setq org-directory "~/Dropbox/org")
@@ -47,8 +46,6 @@
 
 (setq org-agenda-custom-commands
       '(("f" occur-tree "FIXME")))
-
-;; (add-hook 'org-mode-hook 'writegood-mode)
 
 (global-set-key "\C-cl" 'org-store-link)
 (global-set-key "\C-cc" 'org-capture)

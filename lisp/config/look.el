@@ -46,8 +46,7 @@
 ;; ; turn on highlighting current line
 (global-hl-line-mode 1)
 
-(setq fill-column 80)
-;;(add-hook 'prog-mode-hook 'column-enforce-mode) ;; ugly, fix pls
+(add-hook 'prog-mode-hook 'column-enforce-mode)
 (add-hook 'prog-mode-hook 'fci-mode)
 
 (require 'paren)
@@ -95,3 +94,8 @@ height."
 ;;make sure ansi colour character escapes are honoured
 (require 'ansi-color)
 (ansi-color-for-comint-mode-on)
+
+(require 'fill-column-indicator)
+(define-globalized-minor-mode
+  global-fci-mode fci-mode (lambda () (fci-mode 1)))
+(global-fci-mode t)

@@ -1,4 +1,3 @@
-;; (load-library "god-mode")
 (require 'god-mode)
 (global-set-key (kbd "<escape>") 'god-mode-all)
 (defun my-update-cursor ()

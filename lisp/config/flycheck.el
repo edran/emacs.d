@@ -18,13 +18,6 @@
           'me/set-flycheck-auto-speed)
 (add-hook 'prog-mode-hook 'flycheck-mode)
 
-;; This got annoying quite quickly
-;; (require 'pos-tip)
-;; (eval-after-load 'flycheck
-;;   '(custom-set-variables
-;;    '(flycheck-display-errors-function #'flycheck-pos-tip-error-messages)))
-
-
 ;; ######## elisp
 
 (setq-default flycheck-disabled-checkers '(emacs-lisp-checkdoc))
@@ -43,9 +36,3 @@
 (add-hook 'c++-mode-hook
           (lambda ()
             (setq flycheck-gcc-language-standard "c++11")))
-
-
-;; ######## Haskell
-
-(eval-after-load 'flycheck
-  '(add-hook 'flycheck-mode-hook #'flycheck-haskell-setup))

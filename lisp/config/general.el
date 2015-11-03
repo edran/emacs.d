@@ -74,12 +74,6 @@
 (require 'tramp)
 (setq tramp-default-method "ssh")
 
-;; (require 'smex)
-;; (setq smex-save-file "~/.emacs.d/.smex-items")
-;; (smex-initialize)
-;; (global-set-key (kbd "M-x") 'smex)
-;; (global-set-key (kbd "M-X") 'smex-major-mode-commands)
-
 (require 'browse-kill-ring)
 (global-set-key (kbd "M-y") 'browse-kill-ring)
 
@@ -131,5 +125,103 @@
 
 (global-unset-key (kbd "C-z"))
 
+
 ; roslaunch highlighting
 (add-to-list 'auto-mode-alist '("\\.launch$" . xml-mode))
+
+
+(require 'expand-region)
+(global-set-key (kbd "C-=") 'er/expand-region)
+
+
+(require 'guide-key)
+(setq guide-key/guide-key-sequence '("C-x" "C-c" "C-x r" "C-x 4" "C-x v" "C-x 8" "C-u"))
+(guide-key-mode 1)
+(setq guide-key/recursive-key-sequence-flag t)
+(setq guide-key/popup-window-position 'bottom)
+(setq guide-key/highlight-command-regexp "rectangle")
+(setq guide-key/idle-delay 0.7)
+
+
+(require 'iedit)
+(global-set-key (kbd "C-;") 'iedit-mode)
+(global-set-key (kbd "C-:") 'iedit-rectangle-mode)
+
+
+(require 'key-chord)
+(key-chord-define-global "jk" 'god-local-mode)
+(key-chord-define-global "vg"     'eval-region)
+(key-chord-define-global "vb"     'eval-buffer)
+(key-chord-define-global "cy"     'yank-pop)
+(key-chord-define-global "cg"     "\C-c\C-c")
+; Frame Actions
+(key-chord-define-global "xo"     'other-window);
+;; (Key-Chord-Define-Global "X1"     'Delete-Other-Windows)
+;; (Key-chord-define-global "x0"     'delete-window)
+(key-chord-define-global "xk"     'kill-this-buffer-if-not-modified)
+; file actions
+;; (key-chord-define-global "bf" 'ido-switch-buffer)
+;; (key-chord-define-global "xf" 'ido-find-file)
+(key-chord-define-global "zs" "\C-x\C-s")
+(key-chord-define-global "vc" 'vc-next-action)
+(key-chord-define-global "fd" 'me/eshell)
+(key-chord-mode 1)
+(defun kill-this-buffer-if-not-modified ()
+  (interactive)
+  ; taken from menu-bar.el
+  (if (menu-bar-non-minibuffer-window-p)
+      (kill-buffer-if-not-modified (current-buffer))
+    (abort-recursive-edit)))
+
+(require 'multiple-cursors)
+(global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
+(global-set-key (kbd "C->") 'mc/mark-next-like-this)
+(global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
+(global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
+
+
+(require 'projectile)
+(projectile-global-mode)
+(setq projectile-indexing-method 'alien)
+
+
+(require 'autorevert)
+(setq global-auto-revert-non-file-buffers t)
+(setq auto-revert-verbose nil)
+(toggle-diredp-find-file-reuse-dir 1)
+
+
+(require 'deft)
+(setq deft-extensions '("org" "md"))
+(setq deft-default-extension "org")
+(setq deft-directory "~/Dropbox/org/files")
+;; (setq deft-text-mode 'org-mode)
+(setq deft-use-filename-as-title t)
+(global-set-key (kbd "<f11>") 'deft)
+(setq deft-auto-save-interval 20.0)
+
+
+(require 'ag)
+(setq ag-highlight-search t)
+(setq ag-reuse-buffers 't)
+
+
+(add-hook 'prog-mode-hook 'whitespace-cleanup-mode)
+
+
+(persp-mode)
+
+
+(require 'yasnippet)
+(define-key yas-minor-mode-map (kbd "<tab>") nil)
+(define-key yas-minor-mode-map (kbd "TAB") nil)
+(define-key yas-minor-mode-map (kbd "C-<tab>") 'yas-expand)
+(yas-global-mode 1)
+(setq yas-prompt-functions
+      '(yas-dropdown-prompt
+        yas-completing-prompt))
+(add-hook 'term-mode-hook
+ 	  (lambda() (yas-minor-mode -1)))
+
+(require 'ispell)
+(setq ispell-dictionary "british")

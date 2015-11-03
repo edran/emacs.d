@@ -23,15 +23,9 @@
 ;; Undo/redo window configuration with C-c <left>/<right>
 (winner-mode 1)
 
-;; Scrolling? TODO: check smooth-scroll vs smooth-scrolling
-;; (require 'smooth-scrolling)
-;; (require 'smooth-scroll)
-;; (setq scroll-step 1)
 (setq scroll-conservatively 10000)
-;;    (setq auto-window-vscroll nil)
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; isearch  made better
 
+;; Better isearch
 (add-hook 'isearch-mode-end-hook 'my-goto-match-beginning)
 (defun my-goto-match-beginning ()
       (when (and isearch-forward isearch-other-end
@@ -74,7 +68,7 @@
 (global-set-key (kbd "M-n")    'scroll-up-line)
 (global-set-key (kbd "M-p")    'scroll-down-line)
 
-(global-set-key [f9] 'neotree-toggle)
+(global-set-key [f8] 'neotree-toggle)
 
 (defun me/vsplit-last-buffer ()
   (interactive)
