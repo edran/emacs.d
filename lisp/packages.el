@@ -14,98 +14,53 @@
 
 (defvar personal-packages
   '(
-    ;; smartparens ;; TODO setup!
-    ace-jump-mode
-
-    deft
-    ag
+    dash ;; Modern list library
+    ;; -------------------------------
+    ace-jump-mode ;; Jump everywhere (see general.el)
+    deft ;; useful for todo
+    ag ;; pattern search engine
     ace-window ;; better other-window
-    auctex
-    browse-kill-ring
-    buffer-move
-
-    cmake-mode
-    cmake-project
-    column-enforce-mode
-    company
-    company-c-headers
-    company-irony
-    anaconda-mode
-    company-anaconda
-    cpputils-cmake
-    dash
-    diminish
-    dired+
-    dired-details+
-    ecb
-    edit-server
-    ein
-    epc
-    expand-region
-    fill-column-indicator
-    flx-ido
-    flycheck
-    flycheck-color-mode-line
-    flycheck-haskell
-    flycheck-irony
-    flycheck-pos-tip
-    fuzzy
-    ggtags
-    ghc
-    ghci-completion
-    git-gutter-fringe+
-    google-c-style
-    guide-key
-    guru-mode
-    god-mode
-    haskell-mode
-    helm
-    helm-projectile
-    helm-ag
-    help+
-    help-mode+
-    hi2
-    howdoi
-    ido-at-point
-    ido-ubiquitous
-    ido-vertical-mode
-    iedit
-    info+
-    irony
-    ;; jedi
-    key-chord
-    linum-relative
-    magit
-    markdown-mode
-    moe-theme
-    multiple-cursors
-    neotree
-    nlinum
-    ;; org-ac
-    pos-tip
-    powerline
-    projectile
-    python-django
-    python-environment
-    rainbow-delimiters
-    rainbow-identifiers
-    rainbow-mode
-    smart-mode-line
-    smartrep
-    smex
-    smooth-scrolling
-    undo-tree
-    virtualenvwrapper
-    web-mode
-    whitespace-cleanup-mode
-    writegood-mode
-    writeroom-mode
-    yasnippet
-    znc
-    ycmd
-    flycheck-ycmd
-    lua-mode)
-   "A list of packages to ensure are installed at launch.")
+    auctex ;; TeX
+    browse-kill-ring ;; better kill-ring
+    cmake-mode ;; CMake mode
+    column-enforce-mode ;; Highlight long text (see look.el)
+    company ;; Company mode
+    company-c-headers ;; Complete c-headers
+    anaconda-mode ;; Python suite
+    company-anaconda ;; Company frontend for Anaconda
+    diminish ;; Cleaner modes
+    expand-region ;; Expand selected region
+    fill-column-indicator ;; Produce column line at defined column
+    flycheck ;; Check for errors
+    git-gutter-fringe+ ;; Git status in each buffer
+    google-c-style ;; Google c/c++ style
+    guide-key ;; Show suggestions for keychains
+    god-mode ;; GOD MODE HELL YEAH
+    helm ;; Ido replacement
+    helm-projectile ;; Make helm work with projectile
+    helm-ag ;; Make helm work with ag
+    iedit ;; Edit same text everywhere - `C-;` :)
+    key-chord ;; Use key-chords for commands
+    magit ;; Awesome git mode
+    markdown-mode ;; Markdown mode
+    moe-theme ;; Colourful theme!
+    multiple-cursors ;; Sublime-text like multiple cursors
+    neotree ;; Nerdtree like package (press f8)
+    nlinum ;; Number lines in every buffer
+    powerline ;; Better emacs line
+    projectile ;; Better project management
+    rainbow-delimiters ;; Colourful parentheses!
+    rainbow-identifiers ;; Colourful words for programming!
+    rainbow-mode ;; Colour strings in theme elisp files
+    paradox ;; Better list-package page
+    undo-tree ;; Better editing history management
+    whitespace-cleanup-mode ;; Cleanup smartly
+    perspective ;; Workspaces within emacs
+    writeroom-mode ;; Distraction-free editing
+    yasnippet ;; Snippets
+    lua-mode ;; Lua mode
+    )
+  "A list of packages to ensure they are installed at launch.")
 
 (dolist (p personal-packages)
   (when (not (package-installed-p p))
