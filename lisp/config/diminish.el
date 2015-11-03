@@ -1,13 +1,15 @@
-;; Diminish modeline clutter
 (require 'diminish)
-;; (diminish 'wrap-region-mode)
-(diminish 'yas-minor-mode " Y")
-(diminish 'undo-tree-mode " UT")
-;; (diminish 'guru-mode)
-(diminish 'guide-key-mode)
-;; (diminish 'magit-auto-revert-mode)
-(diminish 'projectile-mode " P")
-;; (diminish 'autopair-mode)
-;; (diminish 'global-whitespace-mode)
-(diminish 'git-gutter+-mode)
-(diminish 'company-mode " C")
+
+(defun me/diminish (str mode &optional arg)
+  (eval-after-load str
+    '(diminish mode arg)))
+
+(me/diminish "yasnippet" 'yas-minor-mode " Y")
+(me/diminish "undo-tree" 'undo-tree-mode " UT")
+(me/diminish "guide-key" 'guide-key-mode)
+(me/diminish "projectile" 'projectile-mode " Proj")
+(me/diminish "git-gutter+" 'git-gutter+-mode)
+(me/diminish "company" 'company-mode " C")
+(me/diminish "helm" 'helm-mode)
+(me/diminish "whitespace-cleanup-mode" 'whitespace-cleanup-mode)
+(me/diminish "column-enforce-mode" 'column-enforce-mode)

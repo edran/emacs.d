@@ -188,8 +188,6 @@
 (require 'autorevert)
 (setq global-auto-revert-non-file-buffers t)
 (setq auto-revert-verbose nil)
-(toggle-diredp-find-file-reuse-dir 1)
-
 
 (require 'deft)
 (setq deft-extensions '("org" "md"))

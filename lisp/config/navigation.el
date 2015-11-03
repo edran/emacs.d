@@ -17,9 +17,6 @@
 ;; ./xcape -e '0x1234=Return'
 (global-set-key (kbd "<key-4660>") 'ignore)
 
-(require 'fuzzy)
-(turn-on-fuzzy-isearch)
-
 ;; Undo/redo window configuration with C-c <left>/<right>
 (winner-mode 1)
 
