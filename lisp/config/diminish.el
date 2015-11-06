@@ -11,5 +11,3 @@
 (me/diminish "git-gutter+" 'git-gutter+-mode)
 (me/diminish "company" 'company-mode " C")
 (me/diminish "helm" 'helm-mode)
-(me/diminish "whitespace-cleanup-mode" 'whitespace-cleanup-mode)
-(me/diminish "column-enforce-mode" 'column-enforce-mode)

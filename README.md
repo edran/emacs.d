@@ -5,12 +5,13 @@ unstable. Use at your own risk. Meant to be used with Ubuntu 14.04;
 checkout `precise` branch for 12.04 compatibility.
 
 ## Requirements
-
 * xcape (for god-mode esc switch)
 
 ### LaTeX
-
 * dvipng
+
+### Python
+* pip (for anaconda mode)
 
 ## Installation
 
