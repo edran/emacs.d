@@ -8,8 +8,8 @@
 (powerline-center-theme)
 (powerline-moe-theme)
 
-(global-nlinum-mode 1)
-;; (global-relative-line-numbers-mode)
+(add-hook 'prog-mode 'nlinum-mode)
+;; (global-nlinum-mode 1)
 
 (setq inhibit-startup-message t
       inhibit-startup-echo-area-message t
