@@ -12,6 +12,7 @@ checkout `precise` branch for 12.04 compatibility.
 
 ### Python
 * pip (for anaconda mode)
+* virtualenv (for virtualenvwrapper)
 
 ## Installation
 

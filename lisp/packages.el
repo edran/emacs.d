@@ -59,6 +59,7 @@
     writeroom-mode ;; Distraction-free editing
     yasnippet ;; Snippets
     lua-mode ;; Lua mode
+    virtualenvwrapper ;; Implement virtualenvwrapper
     )
   "A list of packages to ensure they are installed at launch.")
 
