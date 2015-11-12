@@ -19,6 +19,7 @@
 (load "~/.emacs.d/lisp/config/markdown-mode.el")
 (load "~/.emacs.d/lisp/config/org-mode.el")
 (load "~/.emacs.d/lisp/config/python-mode.el")
+(load "~/.emacs.d/lisp/config/lua-mode.el")
 (load "~/.emacs.d/lisp/config/tex-mode.el")
 
 

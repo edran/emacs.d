@@ -25,7 +25,7 @@ init.sh is used to disable caps lock and add Esc with xcape
 TODOs
 -----
 
-* Configure thesaurus for text modes
+* Fix themes import routine
+* Refactor *everything* to use-package.
+* Install elpy (python)
 * Install writegood-mode for essay writing
-* Refactor *everything* to autoload.
-* Install perspective @nex3/perspective-el

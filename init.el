@@ -27,9 +27,7 @@
     (concat custom-themes-path name))))
 
 (mapc 'add-custom-theme-dir
- (directory-files
-  (file-name-as-directory
-   (concat third-party-path "themes"))))
+ (directory-files custom-themes-path))
 
 ;; Keep custom config in separate file
 (setq custom-file
